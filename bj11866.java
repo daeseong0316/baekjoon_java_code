@@ -29,6 +29,6 @@ public class bj11866 {
         		System.out.print(", ");
         	}
         }
-        System.out.println(">");
+        System.out.print(">");
     }
 }
