@@ -16,7 +16,6 @@ public class bj7568 {
 
         int n = sc.nextInt();
         
-        System.out.println();
         List<Person> list = new ArrayList<>();
         for(int i=0;i<n;i++) {
         	int kg = sc.nextInt();
