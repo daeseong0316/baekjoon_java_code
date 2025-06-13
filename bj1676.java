@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class bj1676 {
     public static void main(String[] args) {
