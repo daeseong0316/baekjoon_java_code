@@ -45,6 +45,7 @@ public class bj1260 {
         bw.flush();
         bw.close();
     }
+    /// dfs 함수
     static void dfs(int node) {
     	visited[node] = true;
     	sb.append(node).append(" ");
@@ -54,6 +55,7 @@ public class bj1260 {
     		}
     	}
     }
+    // bfs 함수
     static void bfs(int start) {
     	Queue<Integer> queue = new LinkedList<>();
     	visited[start] = true;
