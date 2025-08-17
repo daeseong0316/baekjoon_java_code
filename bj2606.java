@@ -1,42 +1,42 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class bj2606 {
 	static ArrayList<Integer>[] graph;
 	static boolean[] visited;
-	static int count = 0;	// 1ë²ˆ ë„¤íŠ¸ì›Œí¬ì™€ ì—°ê²° ëœ ë°”ì´ëŸ¬ìŠ¤ì˜ ê°œìˆ˜ 
+	static int count = 0;	// 1¹ø ³×Æ®¿öÅ©¿Í ¿¬°á µÈ ¹ÙÀÌ·¯½ºÀÇ °³¼ö 
 	
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int u = Integer.parseInt(br.readLine());	// ì»´í“¨í„° ìˆ˜
-        int v = Integer.parseInt(br.readLine());	// ë„¤íŠ¸ì›Œí¬ ì—°ê²°
+        int u = Integer.parseInt(br.readLine());	// ÄÄÇ»ÅÍ ¼ö
+        int v = Integer.parseInt(br.readLine());	// ³×Æ®¿öÅ© ¿¬°á
         
         graph = new ArrayList[u+1];
         visited = new boolean[u+1];
-        for(int i=1;i<=u;i++) {		// ì´ˆê¸°í™”
+        for(int i=1;i<=u;i++) {		// ÃÊ±âÈ­
         	graph[i] = new ArrayList<>();
         }
         
         for(int i=0;i<v;i++) {
         	StringTokenizer st = new StringTokenizer(br.readLine());
-        	// í•œ ìŒì”© ë„¤íŠ¸ì›Œí¬ ìƒì—ì„œ ì§ì ‘ ì—°ê²°ë˜ì–´ ìˆëŠ” ì»´í“¨í„°ì˜ ë²ˆí˜¸ ìŒ
+        	// ÇÑ ½Ö¾¿ ³×Æ®¿öÅ© »ó¿¡¼­ Á÷Á¢ ¿¬°áµÇ¾î ÀÖ´Â ÄÄÇ»ÅÍÀÇ ¹øÈ£ ½Ö
         	int a = Integer.parseInt(st.nextToken());
         	int b = Integer.parseInt(st.nextToken());
-        	// ë„¤íŠ¸ì›Œí¬ ì—°ê²°
+        	// ³×Æ®¿öÅ© ¿¬°á
         	graph[a].add(b);
         	graph[b].add(a);
         }
         
-        bfs(1);	// 1ë²ˆë¶€í„° ì‹œì‘
+        bfs(1);	// 1¹øºÎÅÍ ½ÃÀÛ
         
-        bw.write(String.valueOf(count));	// ê°œìˆ˜ ì¶œë ¥
+        bw.write(String.valueOf(count));	// °³¼ö Ãâ·Â
         
         bw.flush();
         bw.close();
     }
-    static void bfs(int node) {		// 1ë²ˆ ë„¤íŠ¸ì›Œí¬ë¡œ ì¸í•´ ë°”ì´ëŸ¬ìŠ¤ì— ê±¸ë¦° ë„¤íŠ¸ì›Œí¬ ì°¾ëŠ” BFSí•¨ìˆ˜
+    static void bfs(int node) {		// 1¹ø ³×Æ®¿öÅ©·Î ÀÎÇØ ¹ÙÀÌ·¯½º¿¡ °É¸° ³×Æ®¿öÅ© Ã£´Â BFSÇÔ¼ö
     	Queue<Integer> que = new LinkedList<>();
     	visited[node] = true;
     	que.offer(node);
@@ -47,7 +47,7 @@ public class Main {
     			if(!visited[next]) {
     				visited[next] = true;
     				que.offer(next);
-    				count++;	// ì»´í“¨í„° ìˆ˜ ì¦ê°€
+    				count++;	// ÄÄÇ»ÅÍ ¼ö Áõ°¡
     			}
     		}
     	}
