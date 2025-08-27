@@ -6,20 +6,20 @@ public class bj28278 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ¸í·ÉÀÇ ¼ö
+        int n = Integer.parseInt(br.readLine());	// ëª…ë ¹ì˜ ìˆ˜
         
         Stack<Integer> stack = new Stack<>();
         
         for(int i=0;i<n;i++) {
-        	String[] str = br.readLine().split(" ");	// ÀÔ·Â ¹Ş±â
-        	String op = str[0];	// ¸í·É
+        	String[] str = br.readLine().split(" ");	// ì…ë ¥ ë°›ê¸°
+        	String op = str[0];	// ëª…ë ¹
         	int x = 0;
         	switch(op) {
-        	case "1": 	// Á¤¼ö X¸¦ ½ºÅÃ¿¡ ³Ö´Â´Ù. 
+        	case "1": 	// ì •ìˆ˜ Xë¥¼ ìŠ¤íƒì— ë„£ëŠ”ë‹¤. 
         		x = Integer.parseInt(str[1]);
         		stack.add(x);
         		break;
-        	case "2":	// ½ºÅÃ¿¡ Á¤¼ö°¡ ÀÖ´Ù¸é ¸Ç À§ÀÇ Á¤¼ö¸¦ »©°í Ãâ·Â
+        	case "2":	// ìŠ¤íƒì— ì •ìˆ˜ê°€ ìˆë‹¤ë©´ ë§¨ ìœ„ì˜ ì •ìˆ˜ë¥¼ ë¹¼ê³  ì¶œë ¥
         		if(stack.isEmpty()) {		
         			bw.write("-1\n");
         		}
@@ -27,10 +27,10 @@ public class bj28278 {
         			bw.write(stack.pop() + "\n");
         		}
         		break;
-        	case "3":	// ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼öÀÇ °³¼ö¸¦ Ãâ·Â
+        	case "3":	// ìŠ¤íƒì— ë“¤ì–´ìˆëŠ” ì •ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
         		bw.write(stack.size() + "\n");
         		break;
-        	case "4":	//  ½ºÅÃÀÌ ºñ¾îÀÖÀ¸¸é 1, ¾Æ´Ï¸é 0À» Ãâ·Â
+        	case "4":	//  ìŠ¤íƒì´ ë¹„ì–´ìˆìœ¼ë©´ 1, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥
         		if(stack.isEmpty()) {
         			bw.write("1\n");
         		}
@@ -38,7 +38,7 @@ public class bj28278 {
         			bw.write("0\n");
         		}
         		break;
-        	case "5":	//  ½ºÅÃ¿¡ Á¤¼ö°¡ ÀÖ´Ù¸é ¸Ç À§ÀÇ Á¤¼ö¸¦ Ãâ·Â
+        	case "5":	//  ìŠ¤íƒì— ì •ìˆ˜ê°€ ìˆë‹¤ë©´ ë§¨ ìœ„ì˜ ì •ìˆ˜ë¥¼ ì¶œë ¥
         		if(stack.isEmpty()) {
         			bw.write("-1\n");
         		}
