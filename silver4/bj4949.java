@@ -6,43 +6,43 @@ public class bj4949 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        StringBuilder sb = new StringBuilder();		// Ãâ·ÂÀ» ´ãÀ» °ø°£
+        StringBuilder sb = new StringBuilder();		// ì¶œë ¥ì„ ë‹´ì„ ê³µê°„
         
         String line;
-        while(!(line = br.readLine()).equals(".")) {	// '.'¸¸ ³ª¿À¸é ½ÇÇà Á¾·á
+        while(!(line = br.readLine()).equals(".")) {	// '.'ë§Œ ë‚˜ì˜¤ë©´ ì‹¤í–‰ ì¢…ë£Œ
         	Stack<Character> stack = new Stack<>();
-        	boolean check = true;	// ±ÕÇüÀÌ ÀâÇô ÀÖ´ÂÁö È®ÀÎ
+        	boolean check = true;	// ê· í˜•ì´ ì¡í˜€ ìˆëŠ”ì§€ í™•ì¸
         	
         	for(int i=0;i<line.length();i++) {
-        		char c = line.charAt(i);	// ÇÏ³ª¾¿ È®ÀÎ
+        		char c = line.charAt(i);	// í•˜ë‚˜ì”© í™•ì¸
         		
         		if(c == '(' || c == '[') {
-        			stack.push(c);	// ¿ŞÂÊ °ıÈ£´Â ½ºÅÃ¿¡ ³Ö´Â´Ù
+        			stack.push(c);	// ì™¼ìª½ ê´„í˜¸ëŠ” ìŠ¤íƒì— ë„£ëŠ”ë‹¤
         		}
-        		else if(c == ')') {	// ¿À¸¥ÂÊ ´İ´Â °ıÈ£(')')ÀÌ¸é¼­
+        		else if(c == ')') {	// ì˜¤ë¥¸ìª½ ë‹«ëŠ” ê´„í˜¸(')')ì´ë©´ì„œ
         			if(stack.isEmpty() || stack.peek() != '(') {	
-        				check = false;	// ½ºÅÃÀÌ ºñ¿ö ÀÖÁö ¾Ê°í ½ºÅÃÀÇ Á¦ÀÏ À§¿¡ °ıÈ£°¡ ('(')ÀÌ¸é
+        				check = false;	// ìŠ¤íƒì´ ë¹„ì›Œ ìˆì§€ ì•Šê³  ìŠ¤íƒì˜ ì œì¼ ìœ„ì— ê´„í˜¸ê°€ ('(')ì´ë©´
         				break;
         			}
         			else {
-        				stack.pop();	// ¾Æ´Ï¸é ½ºÅÃÀÇ Á¦ÀÏ À§¿¡ °ÍÀ» »«´Ù
+        				stack.pop();	// ì•„ë‹ˆë©´ ìŠ¤íƒì˜ ì œì¼ ìœ„ì— ê²ƒì„ ëº€ë‹¤
         			}
         		}
         		else if(c == ']') {
         			if(stack.isEmpty() || stack.peek() != '[') {
-        				check = false;	// ½ºÅÃÀÌ ºñ¿ö ÀÖÁö ¾Ê°í ½ºÅÃÀÇ Á¦ÀÏ À§¿¡ °ıÈ£°¡ ('[')ÀÌ¸é
+        				check = false;	// ìŠ¤íƒì´ ë¹„ì›Œ ìˆì§€ ì•Šê³  ìŠ¤íƒì˜ ì œì¼ ìœ„ì— ê´„í˜¸ê°€ ('[')ì´ë©´
         				break;
         			}
         			else {
-        				stack.pop();	// ¾Æ´Ï¸é ½ºÅÃÀÇ Á¦ÀÏ À§¿¡ °ÍÀ» »«´Ù
+        				stack.pop();	// ì•„ë‹ˆë©´ ìŠ¤íƒì˜ ì œì¼ ìœ„ì— ê²ƒì„ ëº€ë‹¤
         			}
         		}
         	}
-        	if(!stack.isEmpty()) {	// ¸¸¾à ½ºÅÃÀÌ ºñ¿öÁ® ÀÖ´Ù¸é
+        	if(!stack.isEmpty()) {	// ë§Œì•½ ìŠ¤íƒì´ ë¹„ì›Œì ¸ ìˆë‹¤ë©´
         		check = false;	
         	}
         	
-        	if(check) {	// °ıÈ£ ±ÕÇüÀÌ Àß ÀâÇô ÀÖ´Ù¸é 
+        	if(check) {	// ê´„í˜¸ ê· í˜•ì´ ì˜ ì¡í˜€ ìˆë‹¤ë©´ 
         		sb.append("yes\n");
         	}
         	else {
@@ -50,7 +50,7 @@ public class bj4949 {
         	}
         }
         
-        bw.write(sb.toString());	// Ãâ·Â
+        bw.write(sb.toString());	// ì¶œë ¥
         
         bw.flush();
         bw.close();
