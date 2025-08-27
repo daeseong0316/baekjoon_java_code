@@ -2,30 +2,30 @@ import java.io.*;
 import java.util.*;
 
 public class bj1003 {
-	// numÀº 40º¸´Ù ÀÛÀº°Å³ª °°Àº ÀÚ¿¬¼öÀÌ¹Ç·Î ¹è¿­ÀÇ °ø°£À» 41·Î ¸¸µé¾îÁØ´Ù.
-	static int[] count0 = new int[41];	// 0ÀÌ ¸î¹ø ³ª¿À´ÂÁö
-	static int[] count1 = new int[41];	// 1ÀÌ ¸î¹ø ³ª¿À´ÂÁö
-	static boolean[] visited = new boolean[41];	// ÀÌ¹Ì °è»ê ‰ç´ÂÁö ¿©ºÎ
+	// numì€ 40ë³´ë‹¤ ì‘ì€ê±°ë‚˜ ê°™ì€ ìì—°ìˆ˜ì´ë¯€ë¡œ ë°°ì—´ì˜ ê³µê°„ì„ 41ë¡œ ë§Œë“¤ì–´ì¤€ë‹¤.
+	static int[] count0 = new int[41];	// 0ì´ ëª‡ë²ˆ ë‚˜ì˜¤ëŠ”ì§€
+	static int[] count1 = new int[41];	// 1ì´ ëª‡ë²ˆ ë‚˜ì˜¤ëŠ”ì§€
+	static boolean[] visited = new boolean[41];	// ì´ë¯¸ ê³„ì‚° Â‰æ¦®ì© ì—¬ë¶€
 	
-	public static void fibonacci(int n) {	// ÇÇº¸³ªÄ¡ ¼ø¿­ ÇÔ¼ö
-	    if (n == 0) {	// nÀÌ 0ÀÏ ¶§
+	public static void fibonacci(int n) {	// í”¼ë³´ë‚˜ì¹˜ ìˆœì—´ í•¨ìˆ˜
+	    if (n == 0) {	// nì´ 0ì¼ ë•Œ
 	    	count0[0] = 1;	// 
 	    	count1[0] = 0;
 	    	visited[0] = true;
 	        return;
 	    } 
-	    if (n == 1) {	// nÀÌ 1ÀÏ ¶§
+	    if (n == 1) {	// nì´ 1ì¼ ë•Œ
 	    	count0[1] = 0;
 	    	count1[1] = 1;
 	    	visited[1] = true;
 	        return;
 	    }
-	    if(!visited[n]) {	// 0°ú 1ÀÌ ¾Æ´Ò ¶§
-	    	// ÇÇº¸³ªÄ¡ °ø½Ä
+	    if(!visited[n]) {	// 0ê³¼ 1ì´ ì•„ë‹ ë•Œ
+	    	// í”¼ë³´ë‚˜ì¹˜ ê³µì‹
 	    	fibonacci(n - 1);	
             fibonacci(n - 2);
-            count0[n] = count0[n - 1] + count0[n - 2];	// 0ÀÇ °³¼ö 
-            count1[n] = count1[n - 1] + count1[n - 2];	// 1ÀÇ °³¼ö
+            count0[n] = count0[n - 1] + count0[n - 2];	// 0ì˜ ê°œìˆ˜ 
+            count1[n] = count1[n - 1] + count1[n - 2];	// 1ì˜ ê°œìˆ˜
             visited[n] = true;
 	    }
 	}
