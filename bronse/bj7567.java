@@ -6,22 +6,22 @@ public class bj7567 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        String str = br.readLine();	// °ıÈ£·Î ÀÌ·ç¾îÁø ±×¸© ÀÔ·Â
+        String str = br.readLine();	// ê´„í˜¸ë¡œ ì´ë£¨ì–´ì§„ ê·¸ë¦‡ ì…ë ¥
         
-        int result = 10;	// Ã³À½¿£ ±×¸©ÀÌ 1°³ ÀÖÀ½
+        int result = 10;	// ì²˜ìŒì—” ê·¸ë¦‡ì´ 1ê°œ ìˆìŒ
         for(int i=0;i<str.length()-1;i++) {
     		char c = str.charAt(i);
     		char cc = str.charAt(i+1);
     		
-    		if(c == cc) {	// ÇöÀç ±×¸© ¸ğ¾ç°ú ´ÙÀ½ ±×¸© ¸ğ¾ç ºñ±³
-    			result += 5;	// °°Àº ¸ğ¾çÀÌ¸é +5
+    		if(c == cc) {	// í˜„ì¬ ê·¸ë¦‡ ëª¨ì–‘ê³¼ ë‹¤ìŒ ê·¸ë¦‡ ëª¨ì–‘ ë¹„êµ
+    			result += 5;	// ê°™ì€ ëª¨ì–‘ì´ë©´ +5
     		}
     		else {	
-    			result += 10;	// ´Ù¸¥ ¸ğ¾çÀÌ¸é +10
+    			result += 10;	// ë‹¤ë¥¸ ëª¨ì–‘ì´ë©´ +10
     		}
         }
         
-        bw.write(String.valueOf(result));	// ÃÑ ³ôÀÌ Ãâ·Â
+        bw.write(String.valueOf(result));	// ì´ ë†’ì´ ì¶œë ¥
         
         bw.flush();
         bw.close();
