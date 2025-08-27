@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class bj1026 {
-	static int n;	// n°³ÀÇ ¼ö
-	static int[] a, b;	// a¹è¿­, b¹è¿­
+	static int n;	// nê°œì˜ ìˆ˜
+	static int[] a, b;	// aë°°ì—´, bë°°ì—´
 	
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,34 +16,34 @@ public class bj1026 {
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {
-        	a[i] = Integer.parseInt(st.nextToken());	// a¹è¿­ ÀÔ·Â
+        	a[i] = Integer.parseInt(st.nextToken());	// aë°°ì—´ ì…ë ¥
         }
         
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {
-        	b[i] = Integer.parseInt(st.nextToken());	// b¹è¿­ ÀÔ·Â
+        	b[i] = Integer.parseInt(st.nextToken());	// bë°°ì—´ ì…ë ¥
         }
         
-        bw.write(String.valueOf(funtion(a, b)));	// ÃÖ¼Ú°ª Ãâ·Â
+        bw.write(String.valueOf(funtion(a, b)));	// ìµœì†Ÿê°’ ì¶œë ¥
         
         bw.flush();
         bw.close();
     }
-    public static int funtion(int[] a, int[] b) {	// ÃÖ¼Ú°ª ±¸ÇÏ´Â ÇÔ¼ö
-    	Arrays.sort(a);	// a¹è¿­À» ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+    public static int funtion(int[] a, int[] b) {	// ìµœì†Ÿê°’ êµ¬í•˜ëŠ” í•¨ìˆ˜
+    	Arrays.sort(a);	// aë°°ì—´ì„ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
     	
     	Integer[] bCopy = new Integer[n];
     	for(int i=0;i<n;i++) {
-    		bCopy[i] = b[i];	// b¹è¿­ º¹»çÇÏ±â
+    		bCopy[i] = b[i];	// bë°°ì—´ ë³µì‚¬í•˜ê¸°
     	}
-    	Arrays.sort(bCopy, Collections.reverseOrder());	// bº¹»ç ¹è¿­À» ³»¸²Â÷¼øÀ¸·Î Á¤·Ä
+    	Arrays.sort(bCopy, Collections.reverseOrder());	// bë³µì‚¬ ë°°ì—´ì„ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
     	
     	int s = 0;
     	
     	for(int i=0;i<n;i++) {
-    		s += a[i] * bCopy[i];	// ½Ä¿¡ ´ëÀÔÇÏ±â
+    		s += a[i] * bCopy[i];	// ì‹ì— ëŒ€ì…í•˜ê¸°
     	}
     	
-    	return s;	// ÃÖ¼Ú°ª ¹İÈ¯
+    	return s;	// ìµœì†Ÿê°’ ë°˜í™˜
     }
 }
