@@ -9,18 +9,18 @@ public class bj14916 {
         
         int num = Integer.parseInt(br.readLine());
         
-        int count = 0;	// °Å½º¸§ µ· °³¼ö
+        int count = 0;	// ê±°ìŠ¤ë¦„ ëˆ ê°œìˆ˜
         while (num >= 0) {
-            if(num % 5 == 0) {	// numÀÌ 5ÀÇ ¹è¼öÀÌ¸é 5·Î ³ª´©´Â °ÍÀÌ Á¦ÀÏ Àû´Ù
+            if(num % 5 == 0) {	// numì´ 5ì˜ ë°°ìˆ˜ì´ë©´ 5ë¡œ ë‚˜ëˆ„ëŠ” ê²ƒì´ ì œì¼ ì ë‹¤
                 count += num / 5;
-                bw.write(String.valueOf(count));	// °³¼ö Ãâ·ÂÇÏ°í ³¡	
+                bw.write(String.valueOf(count));	// ê°œìˆ˜ ì¶œë ¥í•˜ê³  ë	
                 break;
             }
-            num -= 2;	// numÀÌ 5ÀÇ ¹è¼ö°¡ ¾Æ´Ï¶ó¸é 2¸¦ »©°í ´Ù½Ã ¹İº¹¹®À» ½ÇÇàÇÑ´Ù
+            num -= 2;	// numì´ 5ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë¼ë©´ 2ë¥¼ ë¹¼ê³  ë‹¤ì‹œ ë°˜ë³µë¬¸ì„ ì‹¤í–‰í•œë‹¤
             count++;
         }
         
-        if(num < 0) {	// numÀÌ À½¼öÀÏ ¶§ (¿¹: 1, 3 ÀÏ ¶§)
+        if(num < 0) {	// numì´ ìŒìˆ˜ì¼ ë•Œ (ì˜ˆ: 1, 3 ì¼ ë•Œ)
             bw.write("-1");
         }
         
