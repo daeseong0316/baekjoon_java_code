@@ -2,41 +2,41 @@ import java.io.*;
 import java.util.*;
 
 public class bj11724 {
-	static ArrayList<Integer>[] graph;	// 	ÀÎÁ¢ ¸®½ºÆ®·Î ±×·¡ÇÁ ÀúÀå
-	static boolean[] visited;	// Á¤Á¡ ¹æ¹® ¿©ºÎ Ã¼Å©
+	static ArrayList<Integer>[] graph;	// 	ì¸ì ‘ ë¦¬ìŠ¤íŠ¸ë¡œ ê·¸ë˜í”„ ì €ì¥
+	static boolean[] visited;	// ì •ì  ë°©ë¬¸ ì—¬ë¶€ ì²´í¬
 	
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// Á¤Á¡ÀÇ °³¼ö
-        int m = Integer.parseInt(str[1]);	// °£¼±ÀÇ °³¼ö
+        int n = Integer.parseInt(str[0]);	// ì •ì ì˜ ê°œìˆ˜
+        int m = Integer.parseInt(str[1]);	// ê°„ì„ ì˜ ê°œìˆ˜
         
         graph = new ArrayList[n + 1];
         visited = new boolean[n + 1];
-        for(int i=0;i<=n;i++) {		// ±×·¡ÇÁ ÃÊ±âÈ­
+        for(int i=0;i<=n;i++) {		// ê·¸ë˜í”„ ì´ˆê¸°í™”
         	graph[i] = new ArrayList<>();
         }
         
-        for(int i=0;i<m;i++) {	//	°£¼± Á¤º¸ ÀúÀå
+        for(int i=0;i<m;i++) {	//	ê°„ì„  ì •ë³´ ì €ì¥
         	StringTokenizer st = new StringTokenizer(br.readLine());
-        	// °£¼±ÀÇ ¾ç ³¡Á¡ 
+        	// ê°„ì„ ì˜ ì–‘ ëì  
         	int u = Integer.parseInt(st.nextToken());	
         	int v = Integer.parseInt(st.nextToken());
         	graph[u].add(v);
         	graph[v].add(u);
         }
         
-    	int count = 0;	// ¿¬°á ¿ä¼Ò °³¼ö 
-    	for(int i = 1; i <= n; i++) {	// ¿¬°á ¿ä¼Ò È®ÀÎ
+    	int count = 0;	// ì—°ê²° ìš”ì†Œ ê°œìˆ˜ 
+    	for(int i = 1; i <= n; i++) {	// ì—°ê²° ìš”ì†Œ í™•ì¸
 	         if (!visited[i]) {
 	             dfs(i);
 	             count++;
 	         }
 	    }
         
-        bw.write(count + "\n");	// Ãâ·Â
+        bw.write(count + "\n");	// ì¶œë ¥
         
         bw.flush();
         bw.close();
