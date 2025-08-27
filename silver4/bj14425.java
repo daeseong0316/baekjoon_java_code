@@ -7,24 +7,24 @@ public class bj14425 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// ÁıÇÕ s1¿¡ Æ÷ÇÔ µÇ¾î ÀÖ´Â ¹®ÀÚ¿­ ¼ö
-        int m = Integer.parseInt(str[1]);	// °Ë»çÇÒ ¹®ÀÚ¿­ ¼ö
+        int n = Integer.parseInt(str[0]);	// ì§‘í•© s1ì— í¬í•¨ ë˜ì–´ ìˆëŠ” ë¬¸ìì—´ ìˆ˜
+        int m = Integer.parseInt(str[1]);	// ê²€ì‚¬í•  ë¬¸ìì—´ ìˆ˜
         
         Set<String> set = new HashSet<>();
         
         for(int i=0;i<n;i++) {
-        	set.add(br.readLine());	// ÁıÇÕ s1¿¡ Æ÷ÇÔ µÇ¾î ÀÖ´Â ¹®ÀÚ¿­
+        	set.add(br.readLine());	// ì§‘í•© s1ì— í¬í•¨ ë˜ì–´ ìˆëŠ” ë¬¸ìì—´
         }
 
-        int count = 0;	// Æ÷ÇÔ µÈ ÃÑ °³¼ö
+        int count = 0;	// í¬í•¨ ëœ ì´ ê°œìˆ˜
         
         for(int i=0;i<m;i++) {
-        	if(set.contains(br.readLine())) {	// Æ÷ÇÔ µÇ¾î ÀÖ´ÂÁö È®ÀÎ
+        	if(set.contains(br.readLine())) {	// í¬í•¨ ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸
         		count++;
         	}
         }
         	
-        bw.write(String.valueOf(count));	// °³¼ö Ãâ·Â
+        bw.write(String.valueOf(count));	// ê°œìˆ˜ ì¶œë ¥
         
         bw.flush();
         bw.close();
