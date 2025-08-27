@@ -8,8 +8,8 @@ public class bj11719 {
         
         String str;
         
-        while((str = br.readLine()) != null) {	// ¹®ÀÚ¿­ ÀÔ·Â
-        	bw.write(str + "\n");	// Ãâ·Â
+        while((str = br.readLine()) != null) {	// Â¹Â®Ã€ÃšÂ¿Â­ Ã€Ã”Â·Ã‚
+        	bw.write(str + "\n");	// ÃƒÃ¢Â·Ã‚
         	bw.flush();
         }
         
