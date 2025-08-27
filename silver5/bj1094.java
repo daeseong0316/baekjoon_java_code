@@ -7,24 +7,24 @@ public class bj1094 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ¿øÇÏ´Â ±æÀÌ
+        int n = Integer.parseInt(br.readLine());	// ì›í•˜ëŠ” ê¸¸ì´
         
-        PriorityQueue<Integer> pq = new PriorityQueue<>();	//  ÀÚµ¿À¸·Î °¡Àå ÀÛÀº °ªÀ» Ã£±â À§ÇÑ ÃÖ¼Ò Èü
-        pq.add(64);	// Ã³À½ ¸·´ë±â ±æÀÌ 64¸¦ heap¿¡ ³ÖÀ½
+        PriorityQueue<Integer> pq = new PriorityQueue<>();	//  ìë™ìœ¼ë¡œ ê°€ì¥ ì‘ì€ ê°’ì„ ì°¾ê¸° ìœ„í•œ ìµœì†Œ í™
+        pq.add(64);	// ì²˜ìŒ ë§‰ëŒ€ê¸° ê¸¸ì´ 64ë¥¼ heapì— ë„£ìŒ
         
-        while(true) {	// ¹«ÇÑ ¹İº¿
-        	int sum = 0;	// ¸ğµç ¸·´ë±âÀÇ ÃÑ ÇÕ º¯¼ö
+        while(true) {	// ë¬´í•œ ë°˜ë´‡
+        	int sum = 0;	// ëª¨ë“  ë§‰ëŒ€ê¸°ì˜ ì´ í•© ë³€ìˆ˜
         	
         	for(int len: pq) {
-        		sum += len;	// ¸ğµç ¸·´ë±âÀÇ ÃÑ ÇÕ
+        		sum += len;	// ëª¨ë“  ë§‰ëŒ€ê¸°ì˜ ì´ í•©
         	}
         	
         	if(sum == n) {	
-        		break;	// ¸ğµç ¸·´ë±âÀÇ ÃÑ ÇÕ°ú ¿øÇÏ´Â ±æÀÌ°¡ °°À¸¸é ¹İº¹ ¸ØÃã
+        		break;	// ëª¨ë“  ë§‰ëŒ€ê¸°ì˜ ì´ í•©ê³¼ ì›í•˜ëŠ” ê¸¸ì´ê°€ ê°™ìœ¼ë©´ ë°˜ë³µ ë©ˆì¶¤
         	}
         	
-        	int min = pq.poll();	// heap¿¡¼­ °¡Àå ÀÛÀº °ª ²¨³¿
-        	min /= 2;	// °¡Àå ÀÛÀº °ªÀ» Àı¹İÀ¸·Î ³ª´®
+        	int min = pq.poll();	// heapì—ì„œ ê°€ì¥ ì‘ì€ ê°’ êº¼ëƒ„
+        	min /= 2;	// ê°€ì¥ ì‘ì€ ê°’ì„ ì ˆë°˜ìœ¼ë¡œ ë‚˜ëˆ”
         	
         	pq.add(min);	// 
         	
