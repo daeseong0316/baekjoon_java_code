@@ -6,18 +6,18 @@ public class bj11656 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        String s = br.readLine();	// ´Ü¾î
+        String s = br.readLine();	// ë‹¨ì–´
         
-        String[] misa = new String[s.length()];	// Á¢¹Ì»ç¸¦ ÀúÀåÇÒ °ø°£
+        String[] misa = new String[s.length()];	// ì ‘ë¯¸ì‚¬ë¥¼ ì €ìž¥í•  ê³µê°„
         
         for(int i=0;i<misa.length;i++) {
-        	misa[i] = s.substring(i);	// s¸¦ ¿øÇÏ´Â À§Ä¡ ¸¸Å­ Àß¶ó¼­ misa¿¡ ÀúÀåÇÑ´Ù.
+        	misa[i] = s.substring(i);	// së¥¼ ì›í•˜ëŠ” ìœ„ì¹˜ ë§Œí¼ ìž˜ë¼ì„œ misaì— ì €ìž¥í•œë‹¤.
         }
         
-        Arrays.sort(misa);	// Á¢¹Ì»ç¸¦ »çÀü¼øÀ¸·Î Á¤·Ä
+        Arrays.sort(misa);	// ì ‘ë¯¸ì‚¬ë¥¼ ì‚¬ì „ìˆœìœ¼ë¡œ ì •ë ¬
         
         for(int i=0;i<misa.length;i++) {
-        	bw.write(misa[i] + "\n");	// Ãâ·Â
+        	bw.write(misa[i] + "\n");	// ì¶œë ¥
         }
         
         bw.flush();
