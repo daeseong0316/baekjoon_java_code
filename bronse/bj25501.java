@@ -16,22 +16,22 @@ public class bj25501 {
         	return recursion(s, l+1, r-1);
         }
     }
-    public static int isPalindrome(String s) {	//  ¾î¶² ¹®ÀÚ¿­ÀÌ ÆÓ¸°µå·ÒÀÎÁö ¿©ºÎ¸¦ ÆÇ´ÜÇÏ´Â ÇÔ¼ö
+    public static int isPalindrome(String s) {	//  ì–´ë–¤ ë¬¸ìì—´ì´ íŒ°ë¦°ë“œë¡¬ì¸ì§€ ì—¬ë¶€ë¥¼ íŒë‹¨í•˜ëŠ” í•¨ìˆ˜
         return recursion(s, 0, s.length()-1);
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int t = Integer.parseInt(br.readLine());	// Å×½ºÆ® °³¼ö
+        int t = Integer.parseInt(br.readLine());	// í…ŒìŠ¤íŠ¸ ê°œìˆ˜
         
         for(int i=0;i<t;i++) {
-        	String str = br.readLine();	// ¹®ÀÚ¿­ ÀÔ·Â
+        	String str = br.readLine();	// ë¬¸ìì—´ ì…ë ¥
         	
-        	Rcount = 1;	// °³¼öÀÇ ÃÊ±â°ª
+        	Rcount = 1;	// ê°œìˆ˜ì˜ ì´ˆê¸°ê°’
         	
-        	System.out.print(isPalindrome(str) + " ");	// isPalindromeÀÇ ¹İÈ¯°ª
-        	System.out.println(Rcount);	// recursion È£Ãâ È½¼ö
+        	System.out.print(isPalindrome(str) + " ");	// isPalindromeì˜ ë°˜í™˜ê°’
+        	System.out.println(Rcount);	// recursion í˜¸ì¶œ íšŸìˆ˜
         }
         
         bw.flush();
