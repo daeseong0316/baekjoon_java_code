@@ -7,36 +7,36 @@ public class bj1269 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int a = Integer.parseInt(str[0]);	// aÁýÇÕ
-        int b = Integer.parseInt(str[1]);	// bÁýÇÕ
+        int a = Integer.parseInt(str[0]);	// aì§‘í•©
+        int b = Integer.parseInt(str[1]);	// bì§‘í•©
         
         Set<Integer> Aset = new HashSet<>();
         Set<Integer> Bset = new HashSet<>();
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0;i<a;i++) {
-        	Aset.add(Integer.parseInt(st.nextToken()));	// AÁýÇÕ¿¡ ¿ø¼Ò ³Ö±â 
+        	Aset.add(Integer.parseInt(st.nextToken()));	// Aì§‘í•©ì— ì›ì†Œ ë„£ê¸° 
         }
         
         st = new StringTokenizer(br.readLine());
         for(int i=0;i<b;i++) {
-        	Bset.add(Integer.parseInt(st.nextToken()));	// BÁýÇÕ¿¡ ¿ø¼Ò ³Ö±â
+        	Bset.add(Integer.parseInt(st.nextToken()));	// Bì§‘í•©ì— ì›ì†Œ ë„£ê¸°
         }
         
-        int result = AB(Aset, Bset) + BA(Aset, Bset);	// °³¼ö ÀÔ·Â ¹Þ±â
+        int result = AB(Aset, Bset) + BA(Aset, Bset);	// ê°œìˆ˜ ìž…ë ¥ ë°›ê¸°
         
-        bw.write(String.valueOf(result));	// Ãâ·Â
+        bw.write(String.valueOf(result));	// ì¶œë ¥
         
         bw.flush();
         bw.close();
     }
-    public static int AB(Set<Integer> a, Set<Integer> b) {	// A-B °è»ê
+    public static int AB(Set<Integer> a, Set<Integer> b) {	// A-B ê³„ì‚°
     	Set<Integer> diff = new HashSet<>(a);
     	diff.removeAll(b);
     	
     	return diff.size();
     }
-    public static int BA(Set<Integer> a, Set<Integer> b) {	// B-A °è»ê
+    public static int BA(Set<Integer> a, Set<Integer> b) {	// B-A ê³„ì‚°
     	Set<Integer> diff = new HashSet<>(b);
     	diff.removeAll(a);
     	
