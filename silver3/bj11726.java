@@ -8,19 +8,19 @@ public class bj11726 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         
-        int[] dp = new int[1001];	// ¹®Á¦ n ¹üÀ§(1ÀÌ»ó 1000ÀÌÇÏ)
+        int[] dp = new int[1001];	// ë¬¸ì œ n ë²”ìœ„(1ì´ìƒ 1000ì´í•˜)
         
-        // ÃÊ±â°ª
+        // ì´ˆê¸°ê°’
         dp[1] = 1;
         dp[2] = 2;
         
         for(int i=3;i<=1000;i++) {
-        	// ±ÔÄ¢
+        	// ê·œì¹™
         	dp[i] = (dp[i-2] + dp[i-1]) % 10007;
         }
-        int n = Integer.parseInt(br.readLine());	// n ¹øÂ°
+        int n = Integer.parseInt(br.readLine());	// n ë²ˆì§¸
         
-        bw.write(String.valueOf(dp[n]));	// °ª Ãâ·Â
+        bw.write(String.valueOf(dp[n]));	// ê°’ ì¶œë ¥
         
         bw.flush();
         bw.close();
