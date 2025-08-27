@@ -7,28 +7,28 @@ public class bj2805 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// ³ª¹«ÀÇ ¼ö
-        int m = Integer.parseInt(str[1]);	// ÇÊ¿äÇÑ ³ª¹«ÀÇ ±æÀÌ(¸Å°³º¯¼ö Á¤ÀÇ: ÃÖ´ë °ª )
+        int n = Integer.parseInt(str[0]);	// ë‚˜ë¬´ì˜ ìˆ˜
+        int m = Integer.parseInt(str[1]);	// í•„ìš”í•œ ë‚˜ë¬´ì˜ ê¸¸ì´(ë§¤ê°œë³€ìˆ˜ ì •ì˜: ìµœëŒ€ ê°’ )
         
-        int max = 0;	// Á¦ÀÏ Å« ³ª¹« ±æÀÌ
-        int[] arr = new int[n];	// ³ª¹« ±æÀÌ¸¦ ´ãÀ» ¹è¿­
+        int max = 0;	// ì œì¼ í° ë‚˜ë¬´ ê¸¸ì´
+        int[] arr = new int[n];	// ë‚˜ë¬´ ê¸¸ì´ë¥¼ ë‹´ì„ ë°°ì—´
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {
         	arr[i] = Integer.parseInt(st.nextToken());
-        	if(arr[i] > max) {	// °¡Àå Å« ³ª¹« Ã£±â
+        	if(arr[i] > max) {	// ê°€ì¥ í° ë‚˜ë¬´ ì°¾ê¸°
         		max = arr[i];
         	}
         }
         
-        int result = 0;	// °á°ú º¯¼ö
+        int result = 0;	// ê²°ê³¼ ë³€ìˆ˜
         
-        // ÀÌºĞ Å½»ö
+        // ì´ë¶„ íƒìƒ‰
         int start = 0;
     	int end = max;
     	while(start <= end) {
     		int mid = (start + end) / 2;
     		
-    		long total = TreeSum(arr, mid);	// Àß¸° ³ª¹« ±æÀÌÀÇ ÇÕ
+    		long total = TreeSum(arr, mid);	// ì˜ë¦° ë‚˜ë¬´ ê¸¸ì´ì˜ í•©
     		
     		if(total >= m) {
     			result = mid;	
@@ -39,12 +39,12 @@ public class bj2805 {
 	    	}
     	}
     	
-        bw.write(String.valueOf(result));	// Ãâ·Â
+        bw.write(String.valueOf(result));	// ì¶œë ¥
         
         bw.flush();
         bw.close();
     }
-    public static long TreeSum(int[] tree, int h) {	// Àß¸° ³ª¹« ±æÀÌ¸¦ ÇÕÇÏ´Â ÇÔ¼ö
+    public static long TreeSum(int[] tree, int h) {	// ì˜ë¦° ë‚˜ë¬´ ê¸¸ì´ë¥¼ í•©í•˜ëŠ” í•¨ìˆ˜
     	long sum = 0;
     	
     	for(int i: tree) {
