@@ -7,22 +7,22 @@ public class bj11279 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ¿¬»ê °³¼ö n°³
+        int n = Integer.parseInt(br.readLine());	// ì—°ì‚° ê°œìˆ˜ nê°œ
         
         Queue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
         for(int i=0;i<n;i++) {
-        	int num = Integer.parseInt(br.readLine());	// Á¤¼ö num
+        	int num = Integer.parseInt(br.readLine());	// ì •ìˆ˜ num
         	
-        	if(num == 0) {	// numÀÌ 0ÀÏ ¶§
-        		if(maxheap.isEmpty()) {	// que°¡ ºñ¿öÁ® ÀÖÀ¸¸é
-        			bw.write("0\n");	// 0 Ãâ·Â
+        	if(num == 0) {	// numì´ 0ì¼ ë•Œ
+        		if(maxheap.isEmpty()) {	// queê°€ ë¹„ì›Œì ¸ ìžˆìœ¼ë©´
+        			bw.write("0\n");	// 0 ì¶œë ¥
         		}
         		else {      
-        			bw.write(maxheap.poll() + "\n");	// ºñ¿öÁ® ÀÖÁö ¾ÊÀ¸¸é °¡Àå Å« °ª Ãâ·Â(root ³ëµå Ãâ·Â) 
+        			bw.write(maxheap.poll() + "\n");	// ë¹„ì›Œì ¸ ìžˆì§€ ì•Šìœ¼ë©´ ê°€ìž¥ í° ê°’ ì¶œë ¥(root ë…¸ë“œ ì¶œë ¥) 
         		}
         	}
         	else {	
-        		maxheap.offer(num);	// 0ÀÌ ¾Æ´Ï¸é que¿¡ num °ª ³Ö±â
+        		maxheap.offer(num);	// 0ì´ ì•„ë‹ˆë©´ queì— num ê°’ ë„£ê¸°
         	}
         }
         
