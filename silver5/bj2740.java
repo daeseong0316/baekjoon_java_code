@@ -11,11 +11,11 @@ public class bj2740 {
         int n = Integer.parseInt(str[0]);
         int m = Integer.parseInt(str[1]);
         
-        int[][] arr1 = new int[n][m];	// n*m ¹è¿­
+        int[][] arr1 = new int[n][m];	// n*m ë°°ì—´
         for(int i=0;i<n;i++) {
         	StringTokenizer st = new StringTokenizer(br.readLine());
         	for(int j=0;j<m;j++) {
-        		arr1[i][j] = Integer.parseInt(st.nextToken());	// Çà·Ä¿¡ °ª ÀÔ·Â
+        		arr1[i][j] = Integer.parseInt(st.nextToken());	// í–‰ë ¬ì— ê°’ ì…ë ¥
         	}
         }
         
@@ -24,14 +24,14 @@ public class bj2740 {
         int k = Integer.parseInt(str1[1]);
         
         if (m != m2) {
-            throw new IllegalArgumentException("Çà·Ä °ö¼ÀÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù");
+            throw new IllegalArgumentException("í–‰ë ¬ ê³±ì…ˆì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤");
         }
         
-        int[][] arr2 = new int[m2][k];	// m2*k ¹è¿­
+        int[][] arr2 = new int[m2][k];	// m2*k ë°°ì—´
         for(int i=0;i<m2;i++) {
         	StringTokenizer st = new StringTokenizer(br.readLine());
         	for(int j=0;j<k;j++) {
-        		arr2[i][j] = Integer.parseInt(st.nextToken());	// Çà·Ä¿¡ °ª ÀÔ·Â
+        		arr2[i][j] = Integer.parseInt(st.nextToken());	// í–‰ë ¬ì— ê°’ ì…ë ¥
         	}
         }
         
@@ -39,14 +39,14 @@ public class bj2740 {
         for(int i=0;i<n;i++) {
         	for(int j=0;j<k;j++) {
         		for(int l=0;l<m;l++) {
-        			arr3[i][j] += arr1[i][l] * arr2[l][j];	 // Çà·ÄÀÇ °ö
+        			arr3[i][j] += arr1[i][l] * arr2[l][j];	 // í–‰ë ¬ì˜ ê³±
         		}
         	}
     	}
         
         for(int i=0;i<n;i++) {
         	for(int j=0;j<k;j++) {
-        		bw.write(arr3[i][j] + " ");	// Ãâ·Â
+        		bw.write(arr3[i][j] + " ");	// ì¶œë ¥
         	}
         	bw.newLine();
         }
