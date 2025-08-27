@@ -1,27 +1,27 @@
 import java.io.*;
 import java.util.*;
 
-class Student implements Comparable<Student> {	// ?•™?ƒ?˜ ?ƒ?¼?— ?”°?¼ ? •? ¬?•˜?Š” ê°ì²´
-	String name;	// ?´ë¦?
-	int y, m, d;	// ?ƒ?¼
+class Student implements Comparable<Student> {	// ?â€¢â„¢?Æ’Â?ÂËœ ?Æ’Â?ÂÂ¼?â€”Â ?â€Â°?ÂÂ¼ ?Â â€¢?Â Â¬?â€¢Ëœ?Å â€ ÃªÂ°ÂÃ¬Â²Â´
+	String name;	// ?ÂÂ´Ã«Â¦?
+	int y, m, d;	// ?Æ’Â?ÂÂ¼
 	
-	public Student(String name, int d, int m, int y) {	// ?ƒ?„±?: ?´ë¦„ê³¼ ?ƒ?¼ ì´ˆê¸°?™”
+	public Student(String name, int d, int m, int y) {	// ?Æ’Â?â€Â±?Å¾Â: ?ÂÂ´Ã«Â¦â€ÃªÂ³Â¼ ?Æ’Â?ÂÂ¼ Ã¬Â´Ë†ÃªÂ¸Â°?â„¢â€
 		this.name = name;
 		this.y = y;
 		this.m = m;
 		this.d = d;
 	}
 	
-	public int compareTo(Student other) { 	// ?ƒ?¼?´ ë¹ ë¥¸ ?ˆœ?œ¼ë¡? ? •? ¬ ê¸°ì??
-		 // ?—°?„ê°? ?‹¤ë¥´ë©´ ?—°?„ ê¸°ì??
+	public int compareTo(Student other) { 	// ?Æ’Â?ÂÂ¼?ÂÂ´ Ã«Â¹Â Ã«Â¥Â¸ ?Ë†Å“?Å“Â¼Ã«Â¡? ?Â â€¢?Â Â¬ ÃªÂ¸Â°Ã¬??
+		 // ?â€”Â°?Ââ€ÃªÂ°? ?â€¹Â¤Ã«Â¥Â´Ã«Â©Â´ ?â€”Â°?Ââ€ ÃªÂ¸Â°Ã¬??
         if (this.y != other.y) {
         	return this.y - other.y;
         }
-        // ?—°?„ê°? ê°™ìœ¼ë©? ?›” ê¸°ì??
+        // ?â€”Â°?Ââ€ÃªÂ°? ÃªÂ°â„¢Ã¬Å“Â¼Ã«Â©? ?â€ºâ€ ÃªÂ¸Â°Ã¬??
         if (this.m != other.m) {
         	return this.m - other.m;
         }
-        // ?—°?„??? ?›”?´ ê°™ìœ¼ë©? ?¼ ê¸°ì??
+        // ?â€”Â°?Ââ€??? ?â€ºâ€?ÂÂ´ ÃªÂ°â„¢Ã¬Å“Â¼Ã«Â©? ?ÂÂ¼ ÃªÂ¸Â°Ã¬??
         return this.d - other.d;
 	}
 }
@@ -31,22 +31,22 @@ public class bj5635 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ?•™?ƒ ?ˆ˜
-        List<Student> list = new ArrayList<>();		// ?•™?ƒ ê°ì²´ë¥? ?‹´?„ list
+        int n = Integer.parseInt(br.readLine());	// ?â€¢â„¢?Æ’Â ?Ë†Ëœ
+        List<Student> list = new ArrayList<>();		// ?â€¢â„¢?Æ’Â ÃªÂ°ÂÃ¬Â²Â´Ã«Â¥? ?â€¹Â´?Ââ€ list
         
         for(int i=0;i<n;i++) {
         	String[] input = br.readLine().split(" ");
-            String name = input[0];					// ?´ë¦?
-            int dd = Integer.parseInt(input[1]);	// ?¼
-            int mm = Integer.parseInt(input[2]);	// ?›”
-            int yy = Integer.parseInt(input[3]);	// ?…„
-        	list.add(new Student(name,dd,mm,yy));	// list?— ê°ì²´ ì§??›
+            String name = input[0];					// ?ÂÂ´Ã«Â¦?
+            int dd = Integer.parseInt(input[1]);	// ?ÂÂ¼
+            int mm = Integer.parseInt(input[2]);	// ?â€ºâ€
+            int yy = Integer.parseInt(input[3]);	// ?â€¦â€
+        	list.add(new Student(name,dd,mm,yy));	// list?â€”Â ÃªÂ°ÂÃ¬Â²Â´ Ã¬Â§??â€ºÂ
         }
         
-        Collections.sort(list);	// ?ƒ?¼?„ ê¸°ì???œ¼ë¡? list ? •? ¬ (compareTo ê¸°ì??)
+        Collections.sort(list);	// ?Æ’Â?ÂÂ¼?Ââ€ ÃªÂ¸Â°Ã¬???Å“Â¼Ã«Â¡? list ?Â â€¢?Â Â¬ (compareTo ÃªÂ¸Â°Ã¬??)
         
-        bw.write(list.get(n-1).name + "\n");	// ê°??¥ ?‚˜?´ê°? ? ??? ?‚¬?Œ (?ƒ?¼?´ ê°??¥ ?Š¦?Œ)
-        bw.write(list.get(0).name);				// ê°??¥ ?‚˜?´ê°? ë§ì?? ?‚¬?Œ (?ƒ?¼?´ ê°??¥ ë¹ ë¦„)
+        bw.write(list.get(n-1).name + "\n");	// ÃªÂ°??Å¾Â¥ ?â€šËœ?ÂÂ´ÃªÂ°? ?Â Â??? ?â€šÂ¬?Å¾Å’ (?Æ’Â?ÂÂ¼?ÂÂ´ ÃªÂ°??Å¾Â¥ ?Å Â¦?ÂÅ’)
+        bw.write(list.get(0).name);				// ÃªÂ°??Å¾Â¥ ?â€šËœ?ÂÂ´ÃªÂ°? Ã«Â§Å½Ã¬?? ?â€šÂ¬?Å¾Å’ (?Æ’Â?ÂÂ¼?ÂÂ´ ÃªÂ°??Å¾Â¥ Ã«Â¹Â Ã«Â¦â€)
         
         bw.flush();
         bw.close();
