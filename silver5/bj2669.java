@@ -7,29 +7,29 @@ public class bj2669 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        final int n = 4;	// n°³ÀÇ Á÷»ç°¢Çü
+        final int n = 4;	// nê°œì˜ ì§ì‚¬ê°í˜•
         
-        int count = 0;	// Áßº¹ ¾øÀÌ Â÷ÁöÇÏ´Â ¸éÀû
-        boolean[][] arr = new boolean[101][101];	// Æò¸éÀÇ Å©±â(x,y ÁÂÇ¥ÀÇ ÃÖ´ë Å©±â´Â 100ÀÌ´Ù)
+        int count = 0;	// ì¤‘ë³µ ì—†ì´ ì°¨ì§€í•˜ëŠ” ë©´ì 
+        boolean[][] arr = new boolean[101][101];	// í‰ë©´ì˜ í¬ê¸°(x,y ì¢Œí‘œì˜ ìµœëŒ€ í¬ê¸°ëŠ” 100ì´ë‹¤)
         for(int i=0;i<n;i++) {
         	String[] xy = br.readLine().split(" ");
-        	// (x1,y1)(x2,y2) Å©±âÀÇ Á÷»ç°¢Çü
+        	// (x1,y1)(x2,y2) í¬ê¸°ì˜ ì§ì‚¬ê°í˜•
         	int x1 = Integer.parseInt(xy[0]);	
         	int y1 = Integer.parseInt(xy[1]);
         	int x2 = Integer.parseInt(xy[2]);
         	int y2 = Integer.parseInt(xy[3]);
         	
-        	for(int j=x1;j<x2;j++) {	// x1¿¡¼­ x2±îÁöÀÇ ¹Ø¸é
-        		for(int k=y1;k<y2;k++) {	// y1¿¡¼­ y2±îÁöÀÇ ³ôÀÌ
-        			if(!arr[j][k]) {	// j,k¸¦ È®ÀÎÇÏÁö ¾Ê¾ÒÀ¸¸é
-        				arr[j][k] = true;	// È®ÀÎ Çß´Ù°í Ç¥½Ã
-        				count++;	// Â÷ÁöÇÏ´Â ¸éÀû 1Áõ°¡
+        	for(int j=x1;j<x2;j++) {	// x1ì—ì„œ x2ê¹Œì§€ì˜ ë°‘ë©´
+        		for(int k=y1;k<y2;k++) {	// y1ì—ì„œ y2ê¹Œì§€ì˜ ë†’ì´
+        			if(!arr[j][k]) {	// j,kë¥¼ í™•ì¸í•˜ì§€ ì•Šì•˜ìœ¼ë©´
+        				arr[j][k] = true;	// í™•ì¸ í–ˆë‹¤ê³  í‘œì‹œ
+        				count++;	// ì°¨ì§€í•˜ëŠ” ë©´ì  1ì¦ê°€
         			}
         		}
         	}
         }
         
-        bw.write(String.valueOf(count));	// Â÷ÁöÇÏ´Â ¸éÀû °³¼ö Ãâ·Â
+        bw.write(String.valueOf(count));	// ì°¨ì§€í•˜ëŠ” ë©´ì  ê°œìˆ˜ ì¶œë ¥
         
         bw.flush();
         bw.close();
