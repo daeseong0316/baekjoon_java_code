@@ -6,24 +6,24 @@ public class bj10866 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ¸í·ÉÀÇ ¼ö
+        int n = Integer.parseInt(br.readLine());	// ëª…ë ¹ì˜ ìˆ˜
         
         Deque<Integer> que = new ArrayDeque<>();
         
         for(int i=0;i<n;i++) {
-        	String[] str = br.readLine().split(" ");	// ÀÔ·Â ¹Ş±â
-        	String op = str[0];	// ¸í·É
+        	String[] str = br.readLine().split(" ");	// ì…ë ¥ ë°›ê¸°
+        	String op = str[0];	// ëª…ë ¹
         	int x = 0;
         	switch(op) {
-        	case "push_front": 	// Á¤¼ö X¸¦ µ¦ÀÇ ¾Õ¿¡ ³Ö´Â´Ù.
+        	case "push_front": 	// ì •ìˆ˜ Xë¥¼ ë±ì˜ ì•ì— ë„£ëŠ”ë‹¤.
         		x = Integer.parseInt(str[1]);
         		que.addFirst(x);
         		break;
-        	case "push_back":	// Á¤¼ö X¸¦ µ¦ÀÇ µÚ¿¡ ³Ö´Â´Ù.
+        	case "push_back":	// ì •ìˆ˜ Xë¥¼ ë±ì˜ ë’¤ì— ë„£ëŠ”ë‹¤.
         		x = Integer.parseInt(str[1]);
         		que.addLast(x);
         		break;
-        	case "pop_front":	// µ¦ÀÇ °¡Àå ¾Õ¿¡ ÀÖ´Â ¼ö¸¦ »©°í, ±× ¼ö¸¦ Ãâ·Â
+        	case "pop_front":	// ë±ì˜ ê°€ì¥ ì•ì— ìˆëŠ” ìˆ˜ë¥¼ ë¹¼ê³ , ê·¸ ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {		
         			System.out.println("-1");
         		}
@@ -31,7 +31,7 @@ public class bj10866 {
         			System.out.println(que.pollFirst());
         		}
         		break;
-        	case "pop_back":	// µ¦ÀÇ °¡Àå µÚ¿¡ ÀÖ´Â ¼ö¸¦ »©°í, ±× ¼ö¸¦ Ãâ·Â
+        	case "pop_back":	// ë±ì˜ ê°€ì¥ ë’¤ì— ìˆëŠ” ìˆ˜ë¥¼ ë¹¼ê³ , ê·¸ ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {
         			System.out.println("-1");
         		}
@@ -39,10 +39,10 @@ public class bj10866 {
         			System.out.println(que.pollLast());
         		}
         		break;
-        	case "size":	// µ¦¿¡ µé¾îÀÖ´Â Á¤¼öÀÇ °³¼ö¸¦ Ãâ·Â
+        	case "size":	// ë±ì— ë“¤ì–´ìˆëŠ” ì •ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
         		System.out.println(que.size());
         		break;
-        	case "empty":	// µ¦ÀÌ ºñ¾îÀÖÀ¸¸é 1À», ¾Æ´Ï¸é 0À» Ãâ·Â
+        	case "empty":	// ë±ì´ ë¹„ì–´ìˆìœ¼ë©´ 1ì„, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥
         		if(que.isEmpty()) {
         			System.out.println("1");
         		}
@@ -50,7 +50,7 @@ public class bj10866 {
         			System.out.println("0");
         		}
         		break;
-        	case "front":	// µ¦ÀÇ °¡Àå ¾Õ¿¡ ÀÖ´Â Á¤¼ö¸¦ Ãâ·Â
+        	case "front":	// ë±ì˜ ê°€ì¥ ì•ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {
         			System.out.println("-1");
         		}
@@ -58,7 +58,7 @@ public class bj10866 {
         			System.out.println(que.getFirst());
         		}
         		break;
-        	case "back":	// µ¦ÀÇ °¡Àå µÚ¿¡ ÀÖ´Â Á¤¼ö¸¦ Ãâ·Â
+        	case "back":	// ë±ì˜ ê°€ì¥ ë’¤ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {
         			System.out.println("-1");
         		}
