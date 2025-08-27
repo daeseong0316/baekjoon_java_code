@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.*;
 
 public class bj13241 {
-	public static long GCD(long a, long b) {	// À¯Å¬¸®µå È£Á¦¹ı
-		while(b != 0) {	// c(³ª¸ÓÁö)°¡ 0ÀÌ µÉ ¶§±îÁö ¹«ÇÑ ¹İº¹
+	public static long GCD(long a, long b) {	// ìœ í´ë¦¬ë“œ í˜¸ì œë²•
+		while(b != 0) {	// c(ë‚˜ë¨¸ì§€)ê°€ 0ì´ ë  ë•Œê¹Œì§€ ë¬´í•œ ë°˜ë³µ
 			long temp = b;
 			b = a % b; 
 			a = temp;
 		}
-		return a;	// ÃÖ´ë°ø¾à¼ö ¹İÈ¯
+		return a;	// ìµœëŒ€ê³µì•½ìˆ˜ ë°˜í™˜
 	}
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,9 +20,9 @@ public class bj13241 {
         
         long c = GCD(a, b);
         
-        // ÃÖ¼Ò°ø¹è¼ö ±¸ÇÏ±â
+        // ìµœì†Œê³µë°°ìˆ˜ êµ¬í•˜ê¸°
         long result = 0;
-        if(c == 1) {	// ¼­·Î¼ÒÀÏ °æ¿ì
+        if(c == 1) {	// ì„œë¡œì†Œì¼ ê²½ìš°
         	result = a * b;
         }
         else {	
