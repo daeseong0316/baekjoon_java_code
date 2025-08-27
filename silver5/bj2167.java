@@ -9,25 +9,25 @@ public class bj2167 {
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         
-        // 2Â÷¿ø ¹è¿­
-        int n = Integer.parseInt(st.nextToken());	// n¹øÂ° ¿­	
-        int m = Integer.parseInt(st.nextToken());	// m¹øÂ° Çà
+        // 2ì°¨ì› ë°°ì—´
+        int n = Integer.parseInt(st.nextToken());	// në²ˆì§¸ ì—´	
+        int m = Integer.parseInt(st.nextToken());	// më²ˆì§¸ í–‰
         
-        int[][] arr = new int[n][m];	// n,m »çÀÌÁî¸¦ °¡Áø 2Â÷¿ø ¹è¿­ »ı¼º
+        int[][] arr = new int[n][m];	// n,m ì‚¬ì´ì¦ˆë¥¼ ê°€ì§„ 2ì°¨ì› ë°°ì—´ ìƒì„±
         for(int i=0;i<n;i++) {
         	st = new StringTokenizer(br.readLine());
         	for(int j=0;j<m;j++) {
-        		arr[i][j] = Integer.parseInt(st.nextToken());	// ¹è¿­ ¾È¿¡ ¼ıÀÚ ³Ö±â
+        		arr[i][j] = Integer.parseInt(st.nextToken());	// ë°°ì—´ ì•ˆì— ìˆ«ì ë„£ê¸°
         	}
         }
         
-        int k = Integer.parseInt(br.readLine());	// °ªÀ» ±¸ÇÒ ºÎºĞÀÇ °³¼ö
+        int k = Integer.parseInt(br.readLine());	// ê°’ì„ êµ¬í•  ë¶€ë¶„ì˜ ê°œìˆ˜
         for(int i=0;i<k;i++) {
         	st = new StringTokenizer(br.readLine());
-        	// À§Ä¡ (i, j)
+        	// ìœ„ì¹˜ (i, j)
         	int num1 = Integer.parseInt(st.nextToken());	
         	int num2 = Integer.parseInt(st.nextToken());
-        	// À§Ä¡ (x, y)
+        	// ìœ„ì¹˜ (x, y)
         	int num3 = Integer.parseInt(st.nextToken());
         	int num4 = Integer.parseInt(st.nextToken());
         	
@@ -37,7 +37,7 @@ public class bj2167 {
         			sum += arr[j][o];
         		}
         	}
-        	bw.write(sum + "\n");	// Ãâ·Â
+        	bw.write(sum + "\n");	// ì¶œë ¥
         }
         
         bw.flush();
