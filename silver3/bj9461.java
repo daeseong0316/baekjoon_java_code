@@ -7,23 +7,23 @@ public class bj9461 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int t = Integer.parseInt(br.readLine());	// Å×½ºÆ® °³¼ö
+        int t = Integer.parseInt(br.readLine());	// í…ŒìŠ¤íŠ¸ ê°œìˆ˜
         
         for(int i=0;i<t;i++) {
-        	long[] dp = new long[101];	// ¹è¿­ dp °ø°£
+        	long[] dp = new long[101];	// ë°°ì—´ dp ê³µê°„
         	
-        	// ÃÊ±â°ª
+        	// ì´ˆê¸°ê°’
         	dp[1] = 1;
         	dp[2] = 1;
         	dp[3] = 1;
         	
         	
         	for(int j=4;j<=100;j++) {
-        		dp[j] = dp[j-3] + dp[j-2];	// ¼ø¿­ °ø½Ä
+        		dp[j] = dp[j-3] + dp[j-2];	// ìˆœì—´ ê³µì‹
         	}
-        	int n = Integer.parseInt(br.readLine());	// n¹øÂ° °ª ±¸ÇÏ±â
+        	int n = Integer.parseInt(br.readLine());	// në²ˆì§¸ ê°’ êµ¬í•˜ê¸°
         	
-        	bw.write(dp[n] + "\n");	// °á°ú °ª
+        	bw.write(dp[n] + "\n");	// ê²°ê³¼ ê°’
         }
          
         bw.flush();
