@@ -15,20 +15,20 @@ public class bj1541 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        String input = br.readLine();	// ½Ä ÀÔ·Â ¹Ş±â
+        String input = br.readLine();	// ì‹ ì…ë ¥ ë°›ê¸°
         
-        String[] minusSplit = input.split("-");	// ½ÄÀ» -¸¦ ±âÁØÀ¸·Î ±¸º°ÇÑ´Ù
-        int result = 0;	// °á°ú °ª 0À¸·Î ÃÊ±âÈ­
+        String[] minusSplit = input.split("-");	// ì‹ì„ -ë¥¼ ê¸°ì¤€ìœ¼ë¡œ êµ¬ë³„í•œë‹¤
+        int result = 0;	// ê²°ê³¼ ê°’ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 
-        // Ã¹ ¹øÂ° ±×·ìÀº ´õÇØ¼­ ½ÃÀÛ
+        // ì²« ë²ˆì§¸ ê·¸ë£¹ì€ ë”í•´ì„œ ì‹œì‘
         result += sum(minusSplit[0]);
 
-        // ÀÌÈÄ ±×·ìÀº ¸ğµÎ »©±â
+        // ì´í›„ ê·¸ë£¹ì€ ëª¨ë‘ ë¹¼ê¸°
         for (int i = 1; i < minusSplit.length; i++) {
             result -= sum(minusSplit[i]);
         }
 
-        System.out.println(result);	// °á°ú Ãâ·Â
+        System.out.println(result);	// ê²°ê³¼ ì¶œë ¥
         
         bw.flush();
         bw.close();
