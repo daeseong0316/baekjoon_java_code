@@ -31,10 +31,10 @@ public class bj2639 {
         }
 
         int newSize = size / 2;
-        divide(x, y, newSize); // 1»çºÐ¸é
-        divide(x, y + newSize, newSize); // 2»çºÐ¸é
-        divide(x + newSize, y, newSize); // 3»çºÐ¸é
-        divide(x + newSize, y + newSize, newSize); // 4»çºÐ¸é
+        divide(x, y, newSize); // 1ì‚¬ë¶„ë©´
+        divide(x, y + newSize, newSize); // 2ì‚¬ë¶„ë©´
+        divide(x + newSize, y, newSize); // 3ì‚¬ë¶„ë©´
+        divide(x + newSize, y + newSize, newSize); // 4ì‚¬ë¶„ë©´
     }
 
     public static boolean checkSameColor(int x, int y, int size) {
