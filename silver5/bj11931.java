@@ -7,18 +7,18 @@ public class bj11931 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// n°³ÀÇ Á¤¼ö
+        int n = Integer.parseInt(br.readLine());	// nê°œì˜ ì •ìˆ˜
         
-        List<Integer> list = new ArrayList<>();	// Á¤·ÄÀ» À§ÇØ list ±¸Á¶ »ç¿ë
+        List<Integer> list = new ArrayList<>();	// ì •ë ¬ì„ ìœ„í•´ list êµ¬ì¡° ì‚¬ìš©
         for(int i=0;i<n;i++) {
-        	int num = Integer.parseInt(br.readLine());	// Á¤¼ö ÀÔ·Â
-        	list.add(num);	// list¿¡ ³Ö±â
+        	int num = Integer.parseInt(br.readLine());	// ì •ìˆ˜ ì…ë ¥
+        	list.add(num);	// listì— ë„£ê¸°
         }
         
-        Collections.sort(list);	// Á¤·Ä
+        Collections.sort(list);	// ì •ë ¬
         
         for(int i=list.size()-1;i>=0;i--) {
-        	bw.write(list.get(i) + "\n");	// Á¤·Ä µÈ list¸¦ °Å²Ù·Î Ãâ·Â
+        	bw.write(list.get(i) + "\n");	// ì •ë ¬ ëœ listë¥¼ ê±°ê¾¸ë¡œ ì¶œë ¥
         }
         
         bw.flush();
