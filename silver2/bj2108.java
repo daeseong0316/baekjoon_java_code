@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class bj2108 {
-    // »ê¼ú Æò±Õ
+    // ì‚°ìˆ  í‰ê· 
     public static int mod(List<Integer> list) {
         int sum = 0;
         for (int num : list) {
@@ -10,14 +10,14 @@ public class bj2108 {
         return Math.round((float) sum / list.size());
     }
 
-    // Áß¾Ó°ª
+    // ì¤‘ì•™ê°’
     public static int mid(List<Integer> list) {
         List<Integer> copy = new ArrayList<>(list); 
         Collections.sort(copy);
         return copy.get(copy.size() / 2);
     }
 
-    // ÃÖºó°ª
+    // ìµœë¹ˆê°’
     public static int modeWhich(List<Integer> list) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int num : list) {
@@ -42,7 +42,7 @@ public class bj2108 {
         }
     }
 
-    // ¹üÀ§
+    // ë²”ìœ„
     public static int range(List<Integer> list) {
         int max = Collections.max(list);
         int min = Collections.min(list);
