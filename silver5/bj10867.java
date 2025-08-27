@@ -7,19 +7,19 @@ public class bj10867 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// n°³ÀÇ Á¤¼ö
+        int n = Integer.parseInt(br.readLine());	// nê°œì˜ ì •ìˆ˜
         
-        Set<Integer> set = new HashSet<>();	//setÀº Áßº¹Àº Çã¿ëÇÏÁö ¾ÊÀ½
+        Set<Integer> set = new HashSet<>();	//setì€ ì¤‘ë³µì€ í—ˆìš©í•˜ì§€ ì•ŠìŒ
         StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i=0;i<n;i++) {        	
-        	int num = Integer.parseInt(st.nextToken());	// Á¤¼ö ÀÔ·Â
-        	set.add(num);	// set¿¡ Á¤¼ö ³Ö±â
+        	int num = Integer.parseInt(st.nextToken());	// ì •ìˆ˜ ì…ë ¥
+        	set.add(num);	// setì— ì •ìˆ˜ ë„£ê¸°
         }
-        List<Integer> list = new ArrayList<>(set);	// Á¤·ÄÀ» »ç¿ëÇÏ±â À§ÇØ list¿¡ set ³»¿ë¹° ³Ö±â
-        Collections.sort(list);	// Á¤·Ä
+        List<Integer> list = new ArrayList<>(set);	// ì •ë ¬ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ listì— set ë‚´ìš©ë¬¼ ë„£ê¸°
+        Collections.sort(list);	// ì •ë ¬
         
         for(int i: list) {
-        	bw.write(i + " ");	// Ãâ·Â
+        	bw.write(i + " ");	// ì¶œë ¥
         }
         
         
