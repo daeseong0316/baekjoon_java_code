@@ -16,13 +16,13 @@ public class bj10845 {
             switch (cmd) {
                 case "push":
                     int x = Integer.parseInt(input[1]);
-                    que.offer(x);  // µÚ¿¡ ³Ö±â
+                    que.offer(x);  // ÂµÃšÂ¿Â¡ Â³Ã–Â±Ã¢
                     break;
                 case "pop":
                     if (que.isEmpty()) {
                         sb.append(-1).append('\n');
                     } else {
-                        sb.append(que.poll()).append('\n');  // ¾Õ¿¡¼­ ²¨³»±â
+                        sb.append(que.poll()).append('\n');  // Â¾Ã•Â¿Â¡Â¼Â­ Â²Â¨Â³Â»Â±Ã¢
                     }
                     break;
                 case "size":
