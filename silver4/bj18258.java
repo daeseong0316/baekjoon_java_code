@@ -6,21 +6,21 @@ public class bj18258 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// ¸í·ÉÀÇ ¼ö
+        int n = Integer.parseInt(br.readLine());	// ëª…ë ¹ì˜ ìˆ˜
         
         Deque<Integer> que = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
         
         for(int i=0;i<n;i++) {
-        	String[] str = br.readLine().split(" ");	// ÀÔ·Â ¹Ş±â
-        	String op = str[0];	// ¸í·É
+        	String[] str = br.readLine().split(" ");	// ì…ë ¥ ë°›ê¸°
+        	String op = str[0];	// ëª…ë ¹
         	int x = 0;
         	switch(op) {
-        	case "push": 	// Á¤¼ö X¸¦ µ¦ÀÇ ¾Õ¿¡ ³Ö´Â´Ù.
+        	case "push": 	// ì •ìˆ˜ Xë¥¼ ë±ì˜ ì•ì— ë„£ëŠ”ë‹¤.
         		x = Integer.parseInt(str[1]);
         		que.offer(x);
         		break;
-        	case "pop":	// Å¥ÀÇ °¡Àå ¾Õ¿¡ ÀÖ´Â ¼ö¸¦ »©°í, ±× ¼ö¸¦ Ãâ·Â
+        	case "pop":	// íì˜ ê°€ì¥ ì•ì— ìˆëŠ” ìˆ˜ë¥¼ ë¹¼ê³ , ê·¸ ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {		
         			bw.write("-1\n");
         		}
@@ -28,10 +28,10 @@ public class bj18258 {
         			bw.write(que.poll() + "\n");
         		}
         		break;
-        	case "size":	// Å¥¿¡ µé¾îÀÖ´Â Á¤¼öÀÇ °³¼ö¸¦ Ãâ·Â
+        	case "size":	// íì— ë“¤ì–´ìˆëŠ” ì •ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥
         		bw.write(que.size() + "\n");
         		break;
-        	case "empty":	// Å¥°¡ ºñ¾îÀÖÀ¸¸é 1À», ¾Æ´Ï¸é 0À» Ãâ·Â
+        	case "empty":	// íê°€ ë¹„ì–´ìˆìœ¼ë©´ 1ì„, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥
         		if(que.isEmpty()) {
         			bw.write("1\n");
         			System.out.println();
@@ -40,7 +40,7 @@ public class bj18258 {
         			bw.write("0\n");
         		}
         		break;
-        	case "front":	// Å¥ÀÇ °¡Àå ¾Õ¿¡ ÀÖ´Â Á¤¼ö¸¦ Ãâ·Â
+        	case "front":	// íì˜ ê°€ì¥ ì•ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {
         			bw.write("-1\n");
         		}
@@ -48,7 +48,7 @@ public class bj18258 {
         			bw.write(que.peek() + "\n");
         		}
         		break;
-        	case "back":	// Å¥ÀÇ °¡Àå µÚ¿¡ ÀÖ´Â Á¤¼ö¸¦ Ãâ·Â
+        	case "back":	// íì˜ ê°€ì¥ ë’¤ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ì¶œë ¥
         		if(que.isEmpty()) {
         			bw.write("-1\n");
         		}
