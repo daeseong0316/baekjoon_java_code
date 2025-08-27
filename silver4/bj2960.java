@@ -7,21 +7,21 @@ public class bj2960 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken()); 	// n±îÁöÀÇ ¼ö
-        int k = Integer.parseInt(st.nextToken());	// k¹øÂ° Áö¿öÁø ¼ö 
+        int n = Integer.parseInt(st.nextToken()); 	// nê¹Œì§€ì˜ ìˆ˜
+        int k = Integer.parseInt(st.nextToken());	// kë²ˆì§¸ ì§€ì›Œì§„ ìˆ˜ 
         
-        boolean[] removed = new boolean[n+1];	// Áö¿ò ÆÇº°
+        boolean[] removed = new boolean[n+1];	// ì§€ì›€ íŒë³„
         int count = 0;	
         
-        for(int p=2;p<=n;p++) {	// 2ºÎÅÍ n±îÁöÀÇ ¼ö¿¡¼­
-        	if(!removed[p]) {	// ¾ÆÁ÷ Áö¿ìÁö ¾Ê¾Ò´Ù¸é
+        for(int p=2;p<=n;p++) {	// 2ë¶€í„° nê¹Œì§€ì˜ ìˆ˜ì—ì„œ
+        	if(!removed[p]) {	// ì•„ì§ ì§€ìš°ì§€ ì•Šì•˜ë‹¤ë©´
         		for(int multiple=p;multiple<=n;multiple+=p) {
-        			if(!removed[multiple]) {	// pÀÇ ¹è¼ö Å©±â ¼øÀ¸·Î Áö¿î´Ù
-        				removed[multiple] = true;	// ¼ıÀÚ Áö¿ò
-        				count++;	// °³¼ö È®ÀÎ
+        			if(!removed[multiple]) {	// pì˜ ë°°ìˆ˜ í¬ê¸° ìˆœìœ¼ë¡œ ì§€ìš´ë‹¤
+        				removed[multiple] = true;	// ìˆ«ì ì§€ì›€
+        				count++;	// ê°œìˆ˜ í™•ì¸
         				
-        				if(count == k) {	// Áö¿î °³¼ö°¡ °°À¸¸é
-        					bw.write(String.valueOf(multiple));	// k¹øÀç Áö¿öÁø ¼ö Ãâ·Â
+        				if(count == k) {	// ì§€ìš´ ê°œìˆ˜ê°€ ê°™ìœ¼ë©´
+        					bw.write(String.valueOf(multiple));	// kë²ˆì¬ ì§€ì›Œì§„ ìˆ˜ ì¶œë ¥
         					bw.flush();
         			        bw.close();
         			        return;
