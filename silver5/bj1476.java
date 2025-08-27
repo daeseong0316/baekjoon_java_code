@@ -8,38 +8,38 @@ public class bj1476 {
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         
-        int e = Integer.parseInt(st.nextToken());	// Áö±¸ 1<= e <=15
-        int s = Integer.parseInt(st.nextToken());	// ÅÂ¾ç 1<= s <=28
-        int m = Integer.parseInt(st.nextToken());	// ´Ş  1<= m <=19
+        int e = Integer.parseInt(st.nextToken());	// ì§€êµ¬ 1<= e <=15
+        int s = Integer.parseInt(st.nextToken());	// íƒœì–‘ 1<= s <=28
+        int m = Integer.parseInt(st.nextToken());	// ë‹¬  1<= m <=19
         
-        // ÃÊ±â °ª
+        // ì´ˆê¸° ê°’
         int count = 1;
         int[] arr = {1, 1, 1};	
         
-        while(true) {	// ¿øÇÏ´Â ¹üÀ§¿¡ µµ´Ş ÇÒ ¶§±îÁö ¹«ÇÑ ¹İº¹ 
-        	if(arr[0] == e && arr[1] == s && arr[2] == m) {	// ¿øÇÏ´Â °ª¿¡ µµ´ŞÇÏ¸é ¸ØÃã
+        while(true) {	// ì›í•˜ëŠ” ë²”ìœ„ì— ë„ë‹¬ í•  ë•Œê¹Œì§€ ë¬´í•œ ë°˜ë³µ 
+        	if(arr[0] == e && arr[1] == s && arr[2] == m) {	// ì›í•˜ëŠ” ê°’ì— ë„ë‹¬í•˜ë©´ ë©ˆì¶¤
         		break;
         	}
         	
-        	// ´Ù °°ÀÌ ÇÑ ¹ø¿¡ Áõ°¡
+        	// ë‹¤ ê°™ì´ í•œ ë²ˆì— ì¦ê°€
         	arr[0]++;
         	arr[1]++;
         	arr[2]++;
-        	// ³âµµ Áõ°¡
+        	// ë…„ë„ ì¦ê°€
         	count++;
 
-        	if(arr[0] > 15) {	// Áö±¸ÀÇ ÃÖ´ë ¹üÀ§
+        	if(arr[0] > 15) {	// ì§€êµ¬ì˜ ìµœëŒ€ ë²”ìœ„
         		arr[0] = 1;
         	}
-        	if(arr[1] > 28) {	// ÅÂ¾çÀÇ ÃÖ´ë ¹üÀ§
+        	if(arr[1] > 28) {	// íƒœì–‘ì˜ ìµœëŒ€ ë²”ìœ„
         		arr[1] = 1;
         	}
-        	if(arr[2] > 19) {	// ´ŞÀÇ ÃÖ´ë ¹üÀ§
+        	if(arr[2] > 19) {	// ë‹¬ì˜ ìµœëŒ€ ë²”ìœ„
         		arr[2] = 1;
         	}
         }
         
-        bw.write(String.valueOf(count));	// ³âµµ Ãâ·Â
+        bw.write(String.valueOf(count));	// ë…„ë„ ì¶œë ¥
         
         bw.flush();
         bw.close();
