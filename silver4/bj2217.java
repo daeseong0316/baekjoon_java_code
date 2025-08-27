@@ -6,25 +6,25 @@ public class bj2217 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// n °³ÀÇ ·ÎÇÁ
+        int n = Integer.parseInt(br.readLine());	// n ê°œì˜ ë¡œí”„
         
-        int[] arr = new int[n];	// ·ÎÇÁ¸¦ ´ãÀ» ¹è¿­
+        int[] arr = new int[n];	// ë¡œí”„ë¥¼ ë‹´ì„ ë°°ì—´
         for(int i=0;i<n;i++) {
-        	arr[i] = Integer.parseInt(br.readLine());	// °¢°¢ÀÇ ·ÎÇÁÀÇ ÃÖ´ë Áß·®
+        	arr[i] = Integer.parseInt(br.readLine());	// ê°ê°ì˜ ë¡œí”„ì˜ ìµœëŒ€ ì¤‘ëŸ‰
         }
         
-        Arrays.sort(arr);	// ·ÎÇÁ Á¤·Ä
+        Arrays.sort(arr);	// ë¡œí”„ ì •ë ¬
 
         int result = 0;
         for(int i=0;i<n;i++) {
-        	int sum = arr[i] * (n-i);	// arr[i]¸¦ ÃÖ¼Ò ·ÎÇÁ·Î »ç¿ëÇÒ ¶§, ³²Àº ·ÎÇÁ °³¼ö = (n - i)
+        	int sum = arr[i] * (n-i);	// arr[i]ë¥¼ ìµœì†Œ ë¡œí”„ë¡œ ì‚¬ìš©í•  ë•Œ, ë‚¨ì€ ë¡œí”„ ê°œìˆ˜ = (n - i)
         	
         	if(result < sum) {
-        		result = sum;	// °¡Àå Å« °ª
+        		result = sum;	// ê°€ì¥ í° ê°’
         	}
         }
         
-        bw.write(String.valueOf(result));	// Ãâ·Â
+        bw.write(String.valueOf(result));	// ì¶œë ¥
         
         bw.close();
     }
