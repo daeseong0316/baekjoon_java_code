@@ -8,33 +8,33 @@ public class bj11728 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// Ã¹ ¹øÂ° ¹è¿­ »çÀÌÁî
-        int m = Integer.parseInt(str[1]);	// µÎ ¹øÂ° ¹è¿­ »çÀÌÁî
+        int n = Integer.parseInt(str[0]);	// ì²« ë²ˆì§¸ ë°°ì—´ ì‚¬ì´ì¦ˆ
+        int m = Integer.parseInt(str[1]);	// ë‘ ë²ˆì§¸ ë°°ì—´ ì‚¬ì´ì¦ˆ
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         int[] arr1 = new int[n];
         for(int i=0;i<n;i++) {
-        	arr1[i] = Integer.parseInt(st.nextToken());	// Ã¹ ¹øÂ° ¹è¿­ °ª ÀÔ·Â
+        	arr1[i] = Integer.parseInt(st.nextToken());	// ì²« ë²ˆì§¸ ë°°ì—´ ê°’ ì…ë ¥
         }
         
         st = new StringTokenizer(br.readLine());
         int[] arr2 = new int[m];
         for(int i=0;i<m;i++) {
-        	arr2[i] = Integer.parseInt(st.nextToken());	// µÎ ¹øÂ° ¹è¿­ °ª ÀÔ·Â
+        	arr2[i] = Integer.parseInt(st.nextToken());	// ë‘ ë²ˆì§¸ ë°°ì—´ ê°’ ì…ë ¥
         }
         
-        List<Integer> list = new ArrayList<>();	// µÎ ¹è¿­À» ´ãÀ» list »ı¼º
+        List<Integer> list = new ArrayList<>();	// ë‘ ë°°ì—´ì„ ë‹´ì„ list ìƒì„±
         for(int i: arr1) {
-        	list.add(i);	// list¿¡ 1¹ø ¹è¿­ °ª ³Ö±â
+        	list.add(i);	// listì— 1ë²ˆ ë°°ì—´ ê°’ ë„£ê¸°
         }
         for(int i: arr2) {
-        	list.add(i);	// list¿¡ 2¹ø ¹è¿­ °ª ³Ö±â
+        	list.add(i);	// listì— 2ë²ˆ ë°°ì—´ ê°’ ë„£ê¸°
         }
         
-        Collections.sort(list);	// list °ª Á¤·Ä
+        Collections.sort(list);	// list ê°’ ì •ë ¬
         
         for(int i: list) {
-        	bw.write(i + " ");	// Ãâ·Â
+        	bw.write(i + " ");	// ì¶œë ¥
         }
         
         bw.flush();
