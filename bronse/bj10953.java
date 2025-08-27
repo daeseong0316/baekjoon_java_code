@@ -6,14 +6,14 @@ public class bj10953 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// Å×½ºÆ® °³¼ö
+        int n = Integer.parseInt(br.readLine());	// í…ŒìŠ¤íŠ¸ ê°œìˆ˜
         
         for(int i=0;i<n;i++) {
-        	String[] str = br.readLine().split(",");	// ,·Î ±¸ºÐ µÈ ¼ýÀÚ 2°³ ÀÔ·Â
-        	int a = Integer.parseInt(str[0]);	// ¼ýÀÚ 1¹ø
-        	int b = Integer.parseInt(str[1]);	// ¼ýÀÚ 2¹ø
+        	String[] str = br.readLine().split(",");	// ,ë¡œ êµ¬ë¶„ ëœ ìˆ«ìž 2ê°œ ìž…ë ¥
+        	int a = Integer.parseInt(str[0]);	// ìˆ«ìž 1ë²ˆ
+        	int b = Integer.parseInt(str[1]);	// ìˆ«ìž 2ë²ˆ
         	
-        	bw.write(a+b + "\n");	// ¼ýÀÚ 1¹ø+2¹ø Ãâ·Â	
+        	bw.write(a+b + "\n");	// ìˆ«ìž 1ë²ˆ+2ë²ˆ ì¶œë ¥	
         }
         
         bw.flush();
