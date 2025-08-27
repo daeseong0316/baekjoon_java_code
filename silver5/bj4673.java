@@ -2,29 +2,29 @@ import java.io.*;
 import java.util.*;
 
 public class bj4673 {
-	public static int d(int n) {	// »ı¼ºÀÚ¸¦ ±¸ÇÏ´Â ÇÔ¼ö
-		int sum = n;	// ¸ÕÀú ÀÚ½ÅÀÇ ¼ö¸¦ ´õÇÑ´Ù
+	public static int d(int n) {	// ìƒì„±ìë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜
+		int sum = n;	// ë¨¼ì € ìì‹ ì˜ ìˆ˜ë¥¼ ë”í•œë‹¤
 		while(n > 0) { 
-			sum += n % 10;	// °¢ ÀÚ¸®ÀÇ ¼ö¸¦ ´õÇÑ´Ù
+			sum += n % 10;	// ê° ìë¦¬ì˜ ìˆ˜ë¥¼ ë”í•œë‹¤
 			n /= 10;
 		}
-		return sum;	// »ı¼ºÀÚ¸¦ ¹İÈ¯ÇÑ´Ù
+		return sum;	// ìƒì„±ìë¥¼ ë°˜í™˜í•œë‹¤
 	}
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        boolean[] check = new boolean[10001];	// »ı¼ºÀÚÀÎ °Í°ú ¼¿ÇÁ ³Ñ¹öÀÎ °ÍÀ» È®ÀÎÇÏ´Â boolean °´Ã¼ 
+        boolean[] check = new boolean[10001];	// ìƒì„±ìì¸ ê²ƒê³¼ ì…€í”„ ë„˜ë²„ì¸ ê²ƒì„ í™•ì¸í•˜ëŠ” boolean ê°ì²´ 
         
         for(int i=1;i<=10000;i++) {
         	int n = d(i);
         	if(n <= 10000) {
-        		check[n] = true;	// »ı¼ºÀÚ´Â true·Î ¹Ù²Û´Ù
+        		check[n] = true;	// ìƒì„±ìëŠ” trueë¡œ ë°”ê¾¼ë‹¤
         	}
         }
         
         for(int i=1;i<=10000;i++) {
-        	if(!check[i]) {	// true°¡ ¾Æ´Ñ ¼ö¸¦ Ãâ·ÂÇÑ´Ù.(¼¿ÇÁ ³Ñ¹öÀÎ ¼ö¸¸ Ãâ·ÂÇÑ´Ù)
+        	if(!check[i]) {	// trueê°€ ì•„ë‹Œ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.(ì…€í”„ ë„˜ë²„ì¸ ìˆ˜ë§Œ ì¶œë ¥í•œë‹¤)
         		bw.write(i + "\n");
         	}
         }
