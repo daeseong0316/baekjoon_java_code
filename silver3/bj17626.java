@@ -7,22 +7,22 @@ public class bj17626 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	//n°ª
+        int n = Integer.parseInt(br.readLine());	//nê°’
         
-        int[] dp = new int[n + 1];	// n+1¸¸Å­ÀÇ dp¹è¿­ »ı¼º(n¹øÂ°¸¦ ±¸ÇÏ±â À§ÇØ n+1Ä­ »ı¼º)
+        int[] dp = new int[n + 1];	// n+1ë§Œí¼ì˜ dpë°°ì—´ ìƒì„±(në²ˆì§¸ë¥¼ êµ¬í•˜ê¸° ìœ„í•´ n+1ì¹¸ ìƒì„±)
         
-        //ÃÊ±â °ª
+        //ì´ˆê¸° ê°’
         dp[0] = 0;
         
-        //Á¡È­½Ä
+        //ì í™”ì‹
         for(int i=1;i<=n;i++) {
-        	dp[i] = i;	// ÃÖ¾ÇÀÇ ¼ö( ¿¹)25 -> 25 )
+        	dp[i] = i;	// ìµœì•…ì˜ ìˆ˜( ì˜ˆ)25 -> 25 )
         	for(int j=1;j*j<=i;j++) {
         		dp[i] = Math.min(dp[i], dp[i-j*j]+1);	
         	}
         }
         
-        bw.write(String.valueOf(dp[n]));	// Ãâ·Â
+        bw.write(String.valueOf(dp[n]));	// ì¶œë ¥
         
         bw.flush();
         bw.close();
