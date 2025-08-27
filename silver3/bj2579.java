@@ -7,34 +7,34 @@ public class bj2579 {
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	// °è´Ü °³¼ö
+        int n = Integer.parseInt(br.readLine());	// ê³„ë‹¨ ê°œìˆ˜
         
-        int[] score = new int[n];	// Á¡¼ö
+        int[] score = new int[n];	// ì ìˆ˜
         int[] dp = new int[n];
         
         for (int i = 0; i < n; i++) {
-            score[i] = Integer.parseInt(br.readLine());	//°è´Ü¿¡ Á¡¼ö ÀÔ·Â
+            score[i] = Integer.parseInt(br.readLine());	//ê³„ë‹¨ì— ì ìˆ˜ ì…ë ¥
         }
 
-        if (n == 1) {	// °è´ÜÀÌ 1°³ÀÏ °æ¿ì(1°³ÀÇ °è´ÜÀÌ µµÂø °è´ÜÀÌ µÈ´Ù)
+        if (n == 1) {	// ê³„ë‹¨ì´ 1ê°œì¼ ê²½ìš°(1ê°œì˜ ê³„ë‹¨ì´ ë„ì°© ê³„ë‹¨ì´ ëœë‹¤)
         	System.out.println(score[0]);
             return;
         }
-        if (n == 2) {	// °è´ÜÀÌ 2°³ÀÏ °æ¿ì(°è´Ü 2°³¸¦ ¿¬¼ÓÀ¸·Î ¹â¾Æ¾ß ÇÑ´Ù)
+        if (n == 2) {	// ê³„ë‹¨ì´ 2ê°œì¼ ê²½ìš°(ê³„ë‹¨ 2ê°œë¥¼ ì—°ì†ìœ¼ë¡œ ë°Ÿì•„ì•¼ í•œë‹¤)
             System.out.println(score[0] + score[1]);
             return;
         }
 
-        dp[0] = score[0];	// °è´ÜÀÌ 1°³ÀÌ¸é 1°³ ¹â±â
-        dp[1] = score[0] + score[1];	// °è´ÜÀÌ 2°³ÀÌ¸é 2°³ ´Ù ¹â±â
-        dp[2] = Math.max(score[0] + score[2], score[1] + score[2]);		// °è´ÜÀÌ 3°³ÀÌ¸é (1¹øÂ°+3¹øÂ°)¿Í (2¹øÂ°+3¹øÂ°) Áß Å« °ª
+        dp[0] = score[0];	// ê³„ë‹¨ì´ 1ê°œì´ë©´ 1ê°œ ë°Ÿê¸°
+        dp[1] = score[0] + score[1];	// ê³„ë‹¨ì´ 2ê°œì´ë©´ 2ê°œ ë‹¤ ë°Ÿê¸°
+        dp[2] = Math.max(score[0] + score[2], score[1] + score[2]);		// ê³„ë‹¨ì´ 3ê°œì´ë©´ (1ë²ˆì§¸+3ë²ˆì§¸)ì™€ (2ë²ˆì§¸+3ë²ˆì§¸) ì¤‘ í° ê°’
 
-        // °è´ÜÀÌ 4°³ ÀÌ»óÀÏ °æ¿ì
+        // ê³„ë‹¨ì´ 4ê°œ ì´ìƒì¼ ê²½ìš°
         for (int i = 3; i < n; i++) {
             dp[i] = Math.max(dp[i - 2] + score[i], dp[i - 3] + score[i - 1] + score[i]);
         }
 
-        // Á¦ÀÏ Å« °ª Ãâ·Â
+        // ì œì¼ í° ê°’ ì¶œë ¥
         System.out.println(dp[n - 1]);
         
         bw.flush();
