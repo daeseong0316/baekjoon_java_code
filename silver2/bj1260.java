@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class bj1260 {
-	static ArrayList<Integer>[] graph; // ±×·¡ÇÁ ÀÎÁ¢ ¸®½ºÆ®
-    static boolean[] visited;          // ¹æ¹® Ã¼Å© ¹è¿­
+	static ArrayList<Integer>[] graph; // ê·¸ë˜í”„ ì¸ì ‘ ë¦¬ìŠ¤íŠ¸
+    static boolean[] visited;          // ë°©ë¬¸ ì²´í¬ ë°°ì—´
     static StringBuilder sb = new StringBuilder();
 	    
     public static void main(String[] args) throws IOException {
@@ -11,9 +11,9 @@ public class bj1260 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// Á¤Á¡ÀÇ °³¼ö
-        int m = Integer.parseInt(str[1]);	// °£¼±ÀÇ °³¼ö
-        int v = Integer.parseInt(str[2]);	// Å½»öÀ» ½ÃÀÛÇÒ Á¤Á¡ ½ÃÀÛ ¹øÈ£
+        int n = Integer.parseInt(str[0]);	// ì •ì ì˜ ê°œìˆ˜
+        int m = Integer.parseInt(str[1]);	// ê°„ì„ ì˜ ê°œìˆ˜
+        int v = Integer.parseInt(str[2]);	// íƒìƒ‰ì„ ì‹œì‘í•  ì •ì  ì‹œì‘ ë²ˆí˜¸
         
         graph = new ArrayList[n+1];
         for(int i=1;i<=n;i++) {
@@ -36,7 +36,7 @@ public class bj1260 {
         dfs(v);
         sb.append("\n");
 
-        // BFS ¼öÇà
+        // BFS ìˆ˜í–‰
         visited = new boolean[n + 1];
         bfs(v);
 
@@ -45,7 +45,7 @@ public class bj1260 {
         bw.flush();
         bw.close();
     }
-    /// dfs ÇÔ¼ö
+    /// dfs í•¨ìˆ˜
     static void dfs(int node) {
     	visited[node] = true;
     	sb.append(node).append(" ");
@@ -55,7 +55,7 @@ public class bj1260 {
     		}
     	}
     }
-    // bfs ÇÔ¼ö
+    // bfs í•¨ìˆ˜
     static void bfs(int start) {
     	Queue<Integer> queue = new LinkedList<>();
     	visited[start] = true;
