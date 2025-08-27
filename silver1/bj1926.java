@@ -2,46 +2,46 @@ import java.io.*;
 import java.util.*;
 
 public class bj1926 {
-	static int[][] paper;		// 2Â÷¿ø ¹è¿­·Î µÈ Á¾ÀÌ
-	static boolean[][] visited;	// ¹æ¹® ¿©ºÎ È®ÀÎ
-	static int n, m;	// Á¾ÀÌ Å©±â
+	static int[][] paper;		// 2ì°¨ì› ë°°ì—´ë¡œ ëœ ì¢…ì´
+	static boolean[][] visited;	// ë°©ë¬¸ ì—¬ë¶€ í™•ì¸
+	static int n, m;	// ì¢…ì´ í¬ê¸°
 	
-	static int[] dx = {-1, 1, 0, 0};	// ÁÂ, ÈÄ
-    static int[] dy = {0, 0, -1, 1};	// »ó, ÇÏ
+	static int[] dx = {-1, 1, 0, 0};	// ì¢Œ, í›„
+    static int[] dy = {0, 0, -1, 1};	// ìƒ, í•˜
 	
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        n = Integer.parseInt(str[0]);	// ¼¼·Î
-        m = Integer.parseInt(str[1]);	// °¡·Î
+        n = Integer.parseInt(str[0]);	// ì„¸ë¡œ
+        m = Integer.parseInt(str[1]);	// ê°€ë¡œ
         
-        // ÃÊ±âÈ­ ÀÛ¾÷
+        // ì´ˆê¸°í™” ì‘ì—…
         paper = new int[n][m];
         visited = new boolean[n][m];
         
         for(int i=0;i<n;i++) {
         	StringTokenizer st = new StringTokenizer(br.readLine());
         	for(int j=0;j<m;j++) {
-        		paper[i][j] = Integer.parseInt(st.nextToken());	// 0Àº »öÄ¥ÀÌ ¾ÈµÈ ºÎºĞ, 1Àº »öÄ¥ÀÌ µÈ ºÎºĞÀ» ÀÇ¹ÌÇÑ´Ù
+        		paper[i][j] = Integer.parseInt(st.nextToken());	// 0ì€ ìƒ‰ì¹ ì´ ì•ˆëœ ë¶€ë¶„, 1ì€ ìƒ‰ì¹ ì´ ëœ ë¶€ë¶„ì„ ì˜ë¯¸í•œë‹¤
         	}
         }
         
-        int count = 0;	// ±×¸²ÀÇ °³¼ö
-        int max = 0;	// °¡Àå ³ĞÀº ±×¸²ÀÇ ³ĞÀÌ
+        int count = 0;	// ê·¸ë¦¼ì˜ ê°œìˆ˜
+        int max = 0;	// ê°€ì¥ ë„“ì€ ê·¸ë¦¼ì˜ ë„“ì´
         
         for(int i=0;i<n;i++) {
         	for(int j=0;j<m;j++) {
-        		if(paper[i][j] == 1 && !visited[i][j]) {	// »öÄ¥ÀÌ µÇ¾î ÀÖÀ¸¸é¼­, ¹æ¹®ÇÏÁö ¾ÊÀº ºÎºĞ
-        			int area = bfs(i, j);	// ³ĞÀÌ ÀúÀå
+        		if(paper[i][j] == 1 && !visited[i][j]) {	// ìƒ‰ì¹ ì´ ë˜ì–´ ìˆìœ¼ë©´ì„œ, ë°©ë¬¸í•˜ì§€ ì•Šì€ ë¶€ë¶„
+        			int area = bfs(i, j);	// ë„“ì´ ì €ì¥
         			count++;
-        			max = Math.max(max, area);	// °¡Àå ³ĞÀº ³ĞÀÌ Ã£±â
+        			max = Math.max(max, area);	// ê°€ì¥ ë„“ì€ ë„“ì´ ì°¾ê¸°
         		}
         	}
         }
         
-        // Ãâ·Â
+        // ì¶œë ¥
         bw.write(count + "\n");
         bw.write(max + "\n");
         
