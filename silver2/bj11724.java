@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+ 
 public class bj11724 {
 	static ArrayList<Integer>[] graph;	// 	인접 리스트로 그래프 저장
 	static boolean[] visited;	// 정점 방문 여부 체크
