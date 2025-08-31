@@ -13,7 +13,7 @@ public class bj15650 {
         // 입력: N, M (1부터 N까지 자연수 중에서 중복 없이 M개 선택)
         String[] str = br.readLine().split(" ");
         int n = Integer.parseInt(str[0]);   // 최대 숫자 N
-        int m = Integer.parseInt(str[1]);   // 수열 길이 M
+        int m = Integer.parseInt(str[1]);   // 수열 길이 M 
         
         arr = new int[m];       // 길이가 M인 수열 저장용 배열
         visit = new boolean[n]; // 방문 체크 배열 (현재 코드에서는 사용 안 함)
