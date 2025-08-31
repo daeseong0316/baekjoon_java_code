@@ -12,7 +12,7 @@ public class bj1003 {
 	    	count0[0] = 1;	// 
 	    	count1[0] = 0;
 	    	visited[0] = true;
-	        return;
+	        return; 
 	    } 
 	    if (n == 1) {	// n이 1일 때
 	    	count0[1] = 0;
