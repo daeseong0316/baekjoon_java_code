@@ -4,7 +4,7 @@ import java.util.*;
 public class bj1260 {
 	static ArrayList<Integer>[] graph; // 그래프 인접 리스트
     static boolean[] visited;          // 방문 체크 배열
-    static StringBuilder sb = new StringBuilder();
+    static StringBuilder sb = new StringBuilder(); 
 	    
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
