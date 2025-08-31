@@ -8,7 +8,7 @@ public class bj2576 {
         
         LinkedList<Integer> list = new LinkedList<>();
         
-        int count = 7;
+        int count = 7; 
         for(int i=0;i<count;i++) {
         	int n = Integer.parseInt(br.readLine());
         	if((n % 2) == 1) {
