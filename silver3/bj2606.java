@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+ 
 public class bj2606 {
 	static ArrayList<Integer>[] graph;
 	static boolean[] visited;
