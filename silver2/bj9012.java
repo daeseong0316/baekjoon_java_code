@@ -11,7 +11,7 @@ public class bj9012 {
         	Stack<String> stack = new Stack<>();
         	String str = sc.next();
         	
-        	boolean isValid = true;
+        	boolean isValid = true; 
 
             for(int j = 0; j < str.length(); j++) {
                 char c = str.charAt(j);
