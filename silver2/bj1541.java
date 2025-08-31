@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class bj1541 {
+public class bj1541 { 
 	public static int sum(String str) {
         String[] plusSplit = str.split("\\+");
         int sum = 0;
