@@ -10,7 +10,7 @@ public class bj1463 {
         int n = Integer.parseInt(br.readLine());
         
         int[] dp = new int[n+1];
-        
+         
         dp[1] = 0;
         
         for(int i=2;i<=n;i++) {
