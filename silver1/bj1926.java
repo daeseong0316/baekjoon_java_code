@@ -5,7 +5,7 @@ public class bj1926 {
 	static int[][] paper;		// 2차원 배열로 된 종이
 	static boolean[][] visited;	// 방문 여부 확인
 	static int n, m;	// 종이 크기
-	
+	 
 	static int[] dx = {-1, 1, 0, 0};	// 좌, 후
     static int[] dy = {0, 0, -1, 1};	// 상, 하
 	
