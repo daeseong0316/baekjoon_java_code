@@ -6,7 +6,7 @@ public class bj1012 {
     static boolean[][] visited;		// 배추가 있는지 확인하는 배열
     static int[] dx = {0, 0, -1, 1};	// 배추의 왼, 오
     static int[] dy = {-1, 1, 0, 0};	// 배추의 상, 하
-    static int n, m;	// 배추 밭 가로, 세로 길이
+    static int n, m;	// 배추 밭 가로, 세로 길이 
 	
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
