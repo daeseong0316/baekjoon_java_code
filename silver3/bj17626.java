@@ -7,7 +7,7 @@ public class bj17626 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int n = Integer.parseInt(br.readLine());	//n값
+        int n = Integer.parseInt(br.readLine());	//n값 
         
         int[] dp = new int[n + 1];	// n+1만큼의 dp배열 생성(n번째를 구하기 위해 n+1칸 생성)
         

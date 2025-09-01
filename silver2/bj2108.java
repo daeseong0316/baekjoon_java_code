@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class bj2108 {
+public class bj2108 { 
     // 산술 평균
     public static int mod(List<Integer> list) {
         int sum = 0;

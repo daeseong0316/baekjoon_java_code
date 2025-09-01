@@ -7,7 +7,7 @@ public class bj2805 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         String[] str = br.readLine().split(" ");
-        int n = Integer.parseInt(str[0]);	// 나무의 수
+        int n = Integer.parseInt(str[0]);	// 나무의 수 
         int m = Integer.parseInt(str[1]);	// 필요한 나무의 길이(매개변수 정의: 최대 값 )
         
         int max = 0;	// 제일 큰 나무 길이

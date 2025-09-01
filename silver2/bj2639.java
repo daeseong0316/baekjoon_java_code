@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class bj2639 {
     static int[][] paper;
-    static int white = 0;
+    static int white = 0; 
     static int blue = 0;
 
     public static void main(String[] args) {

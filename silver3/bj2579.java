@@ -6,7 +6,7 @@ public class bj2579 {
         
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        
+         
         int n = Integer.parseInt(br.readLine());	// 계단 개수
         
         int[] score = new int[n];	// 점수

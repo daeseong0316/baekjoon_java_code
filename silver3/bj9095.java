@@ -4,7 +4,7 @@ public class bj9095 {
      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt();
+        int n = sc.nextInt(); 
         int[] dp = new int[12];
         
         dp[0] = 1;

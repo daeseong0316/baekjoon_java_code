@@ -8,7 +8,7 @@ public class bj11279 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         int n = Integer.parseInt(br.readLine());	// 연산 개수 n개
-        
+         
         Queue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
         for(int i=0;i<n;i++) {
         	int num = Integer.parseInt(br.readLine());	// 정수 num
